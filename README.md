@@ -1,6 +1,6 @@
 # How The Web Works
 
-<img src="https://s3.amazonaws.com/learn-verified/welcome-to-internet.jpg" width="300" hspace="10" align="right">
+<img src="https://s3.amazonaws.com/learn-verified/welcome.gif" width="300" hspace="10" align="right">
 
 ## Objectives 
 + Define a client and server
