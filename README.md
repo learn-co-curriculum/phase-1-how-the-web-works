@@ -58,10 +58,18 @@ The `protocol` is the way we're sending our request. There are several different
 
 The `domain name` is a string of characters that identifies the unique location of the web server that hosts that particular website. This will be things like `youtube.com` and `google.com`. 
 
-The `resource` is the particular part of the website we want to load. YouTube has millions and millions of channels and videos, so the specific resource we want is `/adelevevo` (because we can't get "Hello" out of our heads).
+The `resource` is the particular part of the website we want to load. YouTube has millions and millions of channels and videos, so the specific resource we want is `/adelevevo` (because we can't get Hello out of our heads).
 
-An analogy that works well is an apartment building. The domain is the entire building. Within that building though there are hundreds of apartments. We use the specific resource (or sometimes called path) to figure out that we care about apartment 4E. The numbering/lettering system is different for every apartment building in the same way that a server has its resources laid out a bit differently for every website. For example doing a search on Google ends in a URL like this `https://www.google.com/search?q=URI` but searching for a URL on facebook leads to this URL `https://www.facebook.com/search/top/?q=uri`.
+An analogy that works well is thinking of an apartment building. The domain is the entire building. Within that building though there are hundreds of apartments. We use the specific resource (or sometimes called path) to figure out that we care about apartment 4E. The numbering/lettering system is different for every apartment building just like how a server has it's resources laid out is a bit different for every website. For example doing a search on Google ends in a URL like this `https://www.google.com/search?q=URI` but searching for URI on facebook leads to this URL `https://www.facebook.com/search/top/?q=uri`.
 
+### Request Format
+
+So the client makes a request to YouTube's server. In this case, a request to `/adelevevo`. And the server responds with all the code associated with that resource `<!doctype html> .....</html>`, including all images, CSS files, JavaScript files, videos, music, etc. 
+
+When the client makes a request, it includes other items besides just the URL in the "headers". The request header would look something like this. 
+
+
+The request header contains all the information the server needs in order to fulfill the request. This ends up being a lot of meta-data that as a developer we don't need to worry too much about. The big elements are things like the web browser that is making the request, the time of the request and what sort of data type the request would like in response.
 
 ### HTTP Verbs
 
@@ -92,11 +100,11 @@ When the client makes a request, it includes other items besides just the URL in
 
 ## Responses
 
-Once your server receives the request, it will do some processing (run code you wrote!) and then send a response back. The server's response looks something like this:
+Once your server receives the request, it will do some processing (run code you wrote!) and then send a response back. The server's response headers look something like this:
 
 ![](https://s3.amazonaws.com/learn-verified/response-headers.png)
 
-The server's response is separated into two sections: the headers and the body. The headers are all of the metadata about the response. This includes things like content-length (how many big is my response) and what type of content it is. The headers also include the status code of the response.
+The servers response is separated into two sections, the headers and the body. The headers are all of the metadata about the response. This includes things like content-length (how many big is my response) and what type of content it is. The headers also include the status code of the response. The *body* of the response is what you see rendered on the page. It is all of that HTML/CSS that you see! Most of the data of a response is in the body, not in the headers.
 
 ### Status Codes
 
