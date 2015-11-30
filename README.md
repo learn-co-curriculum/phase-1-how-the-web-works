@@ -3,14 +3,14 @@
 ![](https://s3.amazonaws.com/learn-verified/welcome.gif)
 
 ## Objectives 
-+ Define a client and server
-+ Explain what an HTTP request is
-+ Explain the nature of request and response
-+ Define a static site vs. a dynamic site
+1. Define a client and server
+2. Explain what an HTTP request is
+3. Explain the nature of request and response
+4. Define a static site vs. a dynamic site
 
 
 ## Intro
-How many times a day do you use the internet? How many times do you load a different web page? I bet you can't even begin to guess how many times in a year! In order to be a developer, and especially a web developer, it's incredibly important to understand how the web works. From here on out, you are no longer just a user of the internet, you are a creator of the web.
+How many times a day do you use the internet? How many times do you load a different web page? Think about how many times you do this in a year! In order to be a developer-- and especially a web developer-- it's incredibly important to understand how the web works. From here on out, you are no longer just a user of the internet. You are a creator of the web.
 
 ## Client and Server
 
@@ -24,17 +24,19 @@ Turn into this:
 
 ![](https://s3.amazonaws.com/learn-verified/request-intro.png)
 
-The internet operates based on conversations between the client (more familiarly known as the browser) and the server (the code running the web site you're trying to load). By typing in that URL into your browser, you (the client) are *requesting* a web page. The server, then receives the request, processes it and sends a *response*. Your browser receives that response and shows it to you. This is the fundamentals of the web. Browsers send requests, and servers send responses. Until today, you have always been a client. Moving forward you will be building the server. This means processing requests, creating responses and sending them back to the client.
+The internet operates based on conversations between the client (more familiarly known as the browser) and the server (the code running the web site you're trying to load). By typing in that URL into your browser, you (the client) are *requesting* a web page. The server then receives the request, processes it, and sends a *response*. Your browser receives that response and shows it to you. These are the fundamentals of the web. Browsers send requests, and servers send responses. Until today you have always been a client. Moving forward you will be building the server. This means processing requests, creating responses, and sending them back to the client.
 
-While we will be writing our servers using Ruby and a few frameworks, your browser doesn't know, nor does it care what server it talks to. How does that work? How can a server that was written 15 years ago still work with a browser written 15 months or days ago? Not only that, you can use multiple clients! You can use Chrome, Safari, Internet Explorer, Opera, and many others. All of those browsers are able to talk to the same server. 
+We will be writing our servers using Ruby and a few different frameworks. But your browser doesn't know, nor does it care, what server it talks to. How does that work? How can a server that was written 15 years ago still work with a browser written 15 months or days ago? 
 
-Being able to switch out both the server or the client happens because the way browsers and servers talk is controlled by a contract or *protocol*. Specifically it is a protocol created by Tim Berners-Lee called the **H**yper **T**ext **T**ransfer **P**rotocol or HTTP. Your server will receive requests from the browser that follow HTTP. Your server then responds with an HTTP response that all browsers are able to parse.
+In addition, you can use multiple clients! You can use Chrome, Safari, Internet Explorer, Opera, and many others. All of those browsers are able to talk to the same server. Let's take a closer look at how this occurs
 
-## Overview
+## HTTP Overview
+
+Being able to switch out both the server or the client happens because the way browsers and servers talk is controlled by a contract or *protocol*. Specifically it is a protocol created by Tim Berners-Lee called the **H**yper **T**ext **T**ransfer **P**rotocol or HTTP. Your server will receive requests from the browser that follow HTTP. It then responds with an HTTP response that all browsers are able to parse.
 
 `HTTP` is the language browsers speak. Every time you load a web page, you are making an `HTTP` request to the site's server, and the server sends back an `HTTP` response.
 
-In the example above, the client is making an `HTTP GET request` to YouTube's server, YouTube's server sends back a response, and the client renders the page in the browser.
+In the example above, the client is making an `HTTP GET request` to YouTube's server. YouTube's server then sends back a response and the client renders the page in the browser.
 
 <img src="https://s3.amazonaws.com/learn-verified/requests.png">
 
@@ -42,32 +44,24 @@ In the example above, the client is making an `HTTP GET request` to YouTube's se
 
 ### URI
 
-Just like when talking to humans, before requesting something you need to get the attention of the person whom you'd like to send your request. On the web, saying where to send your request is done through **U**niform **R**esource **I**dentifiers or URIs. You've probably also heard of these as URLs. Both are fine. Let's look at the URI we used up top.
+When you make a request on the web, how do you know where to send it to?  This is done through **U**niform **R**esource **I**dentifiers or URIs. You've probably also heard of these as URLs. Both are fine. Let's look at the URI we used up top.
 
 `http://www.youtube.com/adelevevo`
 
-This URL is broken into three parts:
+This URI is broken into three parts:
 
 + `http` - the protocol
 + `youtube.com` - the domain
 + `/adelevevo` - the resource
 
-The `protocol` is the way we're sending our request. There are several different types of internet protocols (SMTP for emails, HTTPS for secure requests, FTP for file transfers). To load a website though, we are using HTTP.
+The `protocol` is the way we're sending our request. There are several different types of internet protocols (SMTP for emails, HTTPS for secure requests, FTP for file transfers). To load a website, we use HTTP.
 
 The `domain name` is a string of characters that identifies the unique location of the web server that hosts that particular website. This will be things like `youtube.com` and `google.com`. 
 
-The `resource` is the particular part of the website we want to load. YouTube has millions and millions of channels and videos, so the specific resource we want is `/adelevevo` (because we can't get Hello out of our heads).
+The `resource` is the particular part of the website we want to load. YouTube has millions and millions of channels and videos, so the specific resource we want is `/adelevevo` (because we can't get "Hello" out of our heads).
 
-An analogy that works well is thinking of an apartment building. The domain is the entire building. Within that building though there are hundreds of apartments. We use the specific resource (or sometimes called path) to figure out that we care about apartment 4E. The numbering/lettering system is different for every apartment building just like how a server has it's resources laid out is a bit different for every website. For example doing a search on Google ends in a URL like this `https://www.google.com/search?q=URI` but searching for URI on facebook leads to this URL `https://www.facebook.com/search/top/?q=uri`.
+An analogy that works well is an apartment building. The domain is the entire building. Within that building though there are hundreds of apartments. We use the specific resource (or sometimes called path) to figure out that we care about apartment 4E. The numbering/lettering system is different for every apartment building in the same way that a server has its resources laid out a bit differently for every website. For example doing a search on Google ends in a URL like this `https://www.google.com/search?q=URI` but searching for a URL on facebook leads to this URL `https://www.facebook.com/search/top/?q=uri`.
 
-### Request Format
-
-So the client makes a request to YouTube's server. In this case, a request to `/adelevevo`. And the server responds with all the code associated with that resource `<!doctype html> .....</html>`, including all images, CSS files, JavaScript files, videos, music, etc. 
-
-When the client makes a request, it includes other items besides just the URL in the "headers" it includes other items besides just the URL in the "headers". The request header would look something like this. The request header contains all the information the server needs in order to fulfill the request: the type of request, the resource (path), the domain as well as some other metadata like what type of browser is making this request.
-
-
-<img src="https://s3.amazonaws.com/learn-verified/request-header.png">
 
 ### HTTP Verbs
 
@@ -86,6 +80,15 @@ When you're making a request, not only do you want to give all the details of yo
 | CONNECT | Converts the request to a TCP/IP tunnel (generally for SSL)|
 | PATCH | Apply a partial modification of a resource | 
 
+### Request Format
+
+Our client so far has made a request to YouTube's server. In this case, a request to `/adelevevo`. The server then responds with all the code associated with that resource `<!doctype html> .....</html>`, including all images, CSS files, JavaScript files, videos, music, etc. 
+
+When the client makes a request, it includes other items besides just the URL in the "headers." The request header contains all the information the server needs in order to fulfill the request: the type of request, the resource (path), the domain as well as some other metadata like what type of browser is making this request. The request header would look something like this.
+
+
+<img src="https://s3.amazonaws.com/learn-verified/request-header.png">
+
 
 ## Responses
 
@@ -93,11 +96,11 @@ Once your server receives the request, it will do some processing (run code you 
 
 ![](https://s3.amazonaws.com/learn-verified/response-headers.png)
 
-The servers response is separated into two sections, the headers and the body. The headers are all of the metadata about the response. This includes things like content-length (how many big is my response) and what type of content it is. The headers also include the status code of the response.
+The server's response is separated into two sections: the headers and the body. The headers are all of the metadata about the response. This includes things like content-length (how many big is my response) and what type of content it is. The headers also include the status code of the response.
 
 ### Status Codes
 
- Every time there is a successful response (you'll know it's successful because the page will load without any erros), it's a status code of `200`, but there are other status codes and it's good to get familiar with them. You've probably see the second most popular status code, `404`. This means file not found. Status codes are separated into categories based on their first digit. Here are the different categories:
+ Every time there is a successful response (you'll know it's successful because the page will load without any errors), it's a status code of `200`, but there are other status codes and it's good to get familiar with them. You've probably seen the second most popular status code, `404`. This means "file not found." Status codes are separated into categories based on their first digit. Here are the different categories:
 
 + 100's - informational
 + 200's - success
@@ -105,18 +108,14 @@ The servers response is separated into two sections, the headers and the body. T
 + 400's - error
 + 500's - server error
 
-A full list of status codes is [up on wikipedia](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes). 
+A full list of status codes is [up on Wikipedia](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes). 
 
 ## Servers
 
 It's important to note that there are two different types of webapps: static and dynamic. A `static` webapp is one that doesn't change. The content doesn't change unless a developer opens up and HTML file and modifies the content of that file. A `dynamic` webapp are sites where the content changes based on user input (i.e. Facebook, Twitter, Yelp, etc.). Every time you visit the site, the content is most likely different because someone else gave a review of that restaurant, or sent out a new tweet, or commented on that image you liked. These are the types of apps you'll be building.
 
-The flow of request and response changes slightly based on a static of a dynamic webapp. 
+The flow of request and response changes slightly based on a static or a dynamic webapp. 
 
 When the client wants to load a static site, the client makes a request, the server finds the file on a disk, and sends it back. Done and Done.
 
 It gets a little bit more complex with a webapp. The client makes a request, the server runs application code (think of this as your Ruby code), and returns a dynamically generated response. 
-
-## Summary
-
-We'll dive further into each of the these topics in the following readings, and especially into writing server-side code that handles different requests, but it's important to get a good overview.
