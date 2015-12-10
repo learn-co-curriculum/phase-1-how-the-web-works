@@ -28,7 +28,7 @@ The internet operates based on conversations between the client (more familiarly
 
 We will be writing our servers using Ruby and a few different frameworks. But your browser doesn't know, nor does it care, what server it talks to. How does that work? How can a server that was written 15 years ago still work with a browser written 15 months or days ago? 
 
-In addition, you can use multiple clients! You can use Chrome, Safari, Internet Explorer, Opera, and many others. All of those browsers are able to talk to the same server. Let's take a closer look at how this occurs
+In addition, you can use multiple clients! You can use Chrome, Safari, Internet Explorer, Opera, and many others. All of those browsers are able to talk to the same server. Let's take a closer look at how this occurs.
 
 ## HTTP Overview
 
@@ -73,7 +73,7 @@ The request header contains all the information the server needs in order to ful
 
 ### HTTP Verbs
 
-When you're making a request, not only do you want to give all the details of your request, you also need to specify what action you would like the server to do. We do this with HTTP Verbs. With the same resource, you make want more than one action to occur. Using a browser, almost all requests are `GET` requests. This just means "hey server, please GET me this resource". There are a few other verbs though. What if we want to send some data from the user to the server? This is done with a `POST` request. There are a ton of verbs, and we'll go further into them later, but here is a full list:
+When you're making a request, not only do you want to give all the details of your request, you also need to specify what action you would like the server to do. We do this with HTTP Verbs. With the same resource, you may want more than one action to occur. Using a browser, almost all requests are `GET` requests. This just means "hey server, please GET me this resource". There are a few other verbs though. What if we want to send some data from the user to the server? This is done with a `POST` request. There are a ton of verbs, and we'll go further into them later, but here is a full list:
 
 
 | VERB  | Description |
@@ -104,7 +104,7 @@ Once your server receives the request, it will do some processing (run code you 
 
 ![](https://s3.amazonaws.com/learn-verified/response-headers.png)
 
-The servers response is separated into two sections, the headers and the body. The headers are all of the metadata about the response. This includes things like content-length (how many big is my response) and what type of content it is. The headers also include the status code of the response. The *body* of the response is what you see rendered on the page. It is all of that HTML/CSS that you see! Most of the data of a response is in the body, not in the headers.
+The servers response is separated into two sections, the headers and the body. The headers are all of the metadata about the response. This includes things like content-length (how big is my response) and what type of content it is. The headers also include the status code of the response. The *body* of the response is what you see rendered on the page. It is all of that HTML/CSS that you see! Most of the data of a response is in the body, not in the headers.
 
 ### Status Codes
 
@@ -120,12 +120,10 @@ A full list of status codes is [up on Wikipedia](https://en.wikipedia.org/wiki/L
 
 ## Servers
 
-It's important to note that there are two different types of webapps: static and dynamic. A `static` webapp is one that doesn't change. The content doesn't change unless a developer opens up and HTML file and modifies the content of that file. A `dynamic` webapp are sites where the content changes based on user input (i.e. Facebook, Twitter, Yelp, etc.). Every time you visit the site, the content is most likely different because someone else gave a review of that restaurant, or sent out a new tweet, or commented on that image you liked. These are the types of apps you'll be building.
+It's important to note that there are two different types of webapps: static and dynamic. A `static` webapp is one that doesn't change. The content doesn't change unless a developer opens up a HTML file and modifies the content of that file. A `dynamic` webapp are sites where the content changes based on user input (i.e. Facebook, Twitter, Yelp, etc.). Every time you visit the site, the content is most likely different because someone else gave a review of that restaurant, or sent out a new tweet, or commented on that image you liked. These are the types of apps you'll be building.
 
 The flow of request and response changes slightly based on a static or a dynamic webapp. 
 
 When the client wants to load a static site, the client makes a request, the server finds the file on a disk, and sends it back. Done and Done.
 
 It gets a little bit more complex with a webapp. The client makes a request, the server runs application code (think of this as your Ruby code), and returns a dynamically generated response. 
-
-<a href='https://learn.co/lessons/how-the-web-works-readme' data-visibility='hidden'>View this lesson on Learn.co</a>
