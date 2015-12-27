@@ -62,15 +62,6 @@ The `resource` is the particular part of the website we want to load. YouTube ha
 
 An analogy that works well is thinking of an apartment building. The domain is the entire building. Within that building though there are hundreds of apartments. We use the specific resource (or sometimes called path) to figure out that we care about apartment 4E. The numbering/lettering system is different for every apartment building just like how a server has it's resources laid out is a bit different for every website. For example doing a search on Google ends in a URL like this `https://www.google.com/search?q=URI` but searching for URI on facebook leads to this URL `https://www.facebook.com/search/top/?q=uri`.
 
-### Request Format
-
-So the client makes a request to YouTube's server. In this case, a request to `/adelevevo`. And the server responds with all the code associated with that resource `<!doctype html> .....</html>`, including all images, CSS files, JavaScript files, videos, music, etc. 
-
-When the client makes a request, it includes other items besides just the URL in the "headers". The request header would look something like this. 
-
-
-The request header contains all the information the server needs in order to fulfill the request. This ends up being a lot of meta-data that as a developer we don't need to worry too much about. The big elements are things like the web browser that is making the request, the time of the request and what sort of data type the request would like in response.
-
 ### HTTP Verbs
 
 When you're making a request, not only do you want to give all the details of your request, you also need to specify what action you would like the server to do. We do this with HTTP Verbs. With the same resource, you may want more than one action to occur. Using a browser, almost all requests are `GET` requests. This just means "hey server, please GET me this resource". There are a few other verbs though. What if we want to send some data from the user to the server? This is done with a `POST` request. There are a ton of verbs, and we'll go further into them later, but here is a full list:
@@ -127,3 +118,5 @@ The flow of request and response changes slightly based on a static or a dynamic
 When the client wants to load a static site, the client makes a request, the server finds the file on a disk, and sends it back. Done and Done.
 
 It gets a little bit more complex with a webapp. The client makes a request, the server runs application code (think of this as your Ruby code), and returns a dynamically generated response. 
+
+<a href='https://learn.co/lessons/how-the-web-works-readme' data-visibility='hidden'>View this lesson on Learn.co</a>
