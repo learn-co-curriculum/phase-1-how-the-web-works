@@ -119,4 +119,4 @@ When the client wants to load a static site, the client makes a request, the ser
 
 It gets a little bit more complex with a webapp. The client makes a request, the server runs application code (think of this as your Ruby code), and returns a dynamically generated response. 
 
-<a href='https://learn.co/lessons/how-the-web-works-readme' data-visibility='hidden'>View this lesson on Learn.co</a>
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/how-the-web-works-readme' title='How The Web Works'>How The Web Works</a> on Learn.co and start learning to code for free.</p>
