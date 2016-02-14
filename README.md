@@ -60,7 +60,7 @@ The `domain name` is a string of characters that identifies the unique location 
 
 The `resource` is the particular part of the website we want to load. YouTube has millions and millions of channels and videos, so the specific resource we want is `/adelevevo` (because we can't get Hello out of our heads).
 
-An analogy that works well is thinking of an apartment building. The domain is the entire building. Within that building though there are hundreds of apartments. We use the specific resource (or sometimes called path) to figure out that we care about apartment 4E. The numbering/lettering system is different for every apartment building just like how a server has it's resources laid out is a bit different for every website. For example doing a search on Google ends in a URL like this `https://www.google.com/search?q=URI` but searching for URI on facebook leads to this URL `https://www.facebook.com/search/top/?q=uri`.
+An analogy that works well is thinking of an apartment building. The domain is the entire building. Within that building though there are hundreds of apartments. We use the specific resource (or sometimes called path) to figure out that we care about apartment 4E. The numbering/lettering system is different for every apartment building just like how a server has its resources laid out is a bit different for every website. For example doing a search on Google ends in a URL like this `https://www.google.com/search?q=URI` but searching for URI on Facebook leads to this URL `https://www.facebook.com/search/top/?q=uri`.
 
 ### HTTP Verbs
 
@@ -119,4 +119,6 @@ When the client wants to load a static site, the client makes a request, the ser
 
 It gets a little bit more complex with a webapp. The client makes a request, the server runs application code (think of this as your Ruby code), and returns a dynamically generated response. 
 
-<p data-visibility='hidden'>View <a href='https://learn.co/lessons/how-the-web-works-readme' title='How The Web Works'>How The Web Works</a> on Learn.co and start learning to code for free.</p>
+<a href='https://learn.co/lessons/how-the-web-works-readme' data-visibility='hidden'>View this lesson on Learn.co</a>
+
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/how-the-web-works-readme'>How the Internet Works</a> on Learn.co and start learning to code for free.</p>
