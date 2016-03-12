@@ -111,7 +111,7 @@ A full list of status codes is [up on Wikipedia](https://en.wikipedia.org/wiki/L
 
 ## Servers
 
-It's important to note that there are two different types of webapps: static and dynamic. A `static` webapp is one that doesn't change. The content doesn't change unless a developer opens up a HTML file and modifies the content of that file. A `dynamic` webapp are sites where the content changes based on user input (i.e. Facebook, Twitter, Yelp, etc.). Every time you visit the site, the content is most likely different because someone else gave a review of that restaurant, or sent out a new tweet, or commented on that image you liked. These are the types of apps you'll be building.
+It's important to note that there are two different types of webapps: static and dynamic. A `static` webapp is one that doesn't change. The content doesn't change unless a developer opens up a HTML file and modifies the content of that file. A `dynamic` webapp are sites where the content changes based on user input (e.g. Facebook, Twitter, Yelp, etc.). Every time you visit the site, the content is most likely different because someone else gave a review of that restaurant, or sent out a new tweet, or commented on that image you liked. These are the types of apps you'll be building.
 
 The flow of request and response changes slightly based on a static or a dynamic webapp. 
 
