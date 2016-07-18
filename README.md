@@ -44,7 +44,7 @@ In the example above, the client is making an `HTTP GET request` to YouTube's se
 
 ### URI
 
-When you make a request on the web, how do you know where to send it to?  This is done through **U**niform **R**esource **I**dentifiers or URIs. You've probably also heard of these as URLs. Both are fine. Let's look at the URI we used up top.
+When you make a request on the web, how do you know where to send it?  This is done through **U**niform **R**esource **I**dentifiers or URIs. You've probably also heard of these as URLs. Both are fine. Let's look at the URI we used up top.
 
 `http://www.youtube.com/adelevevo`
 
@@ -60,7 +60,7 @@ The `domain name` is a string of characters that identifies the unique location 
 
 The `resource` is the particular part of the website we want to load. YouTube has millions and millions of channels and videos, so the specific resource we want is `/adelevevo` (because we can't get Hello out of our heads).
 
-An analogy that works well is thinking of an apartment building. The domain is the entire building. Within that building though there are hundreds of apartments. We use the specific resource (or sometimes called path) to figure out that we care about apartment 4E. The numbering/lettering system is different for every apartment building just like how a server has its resources laid out is a bit different for every website. For example doing a search on Google ends in a URL like this `https://www.google.com/search?q=URI` but searching for URI on Facebook leads to this URL `https://www.facebook.com/search/top/?q=uri`.
+An analogy that works well is thinking of an apartment building. The domain is the entire building. Within that building though there are hundreds of apartments. We use the specific resource (or sometimes called path) to figure out that we care about apartment 4E. The numbering/lettering system is different for every apartment building, just like how a server has its resources laid out is a bit different for every website. For example doing a search on Google ends in a URL like this `https://www.google.com/search?q=URI` but searching for URI on Facebook leads to this URL `https://www.facebook.com/search/top/?q=uri`.
 
 ### HTTP Verbs
 
@@ -95,7 +95,7 @@ Once your server receives the request, it will do some processing (run code you 
 
 ![](https://s3.amazonaws.com/learn-verified/response-headers.png)
 
-The servers response is separated into two sections, the headers and the body. The headers are all of the metadata about the response. This includes things like content-length (how big is my response) and what type of content it is. The headers also include the status code of the response. The *body* of the response is what you see rendered on the page. It is all of that HTML/CSS that you see! Most of the data of a response is in the body, not in the headers.
+The server's response is separated into two sections, the headers and the body. The headers are all of the metadata about the response. This includes things like content-length (how big is my response) and what type of content it is. The headers also include the status code of the response. The *body* of the response is what you see rendered on the page. It is all of that HTML/CSS that you see! Most of the data of a response is in the body, not in the headers.
 
 ### Status Codes
 
@@ -111,7 +111,7 @@ A full list of status codes is [up on Wikipedia](https://en.wikipedia.org/wiki/L
 
 ## Servers
 
-It's important to note that there are two different types of webapps: static and dynamic. A `static` webapp is one that doesn't change. The content doesn't change unless a developer opens up a HTML file and modifies the content of that file. A `dynamic` webapp are sites where the content changes based on user input (e.g. Facebook, Twitter, Yelp, etc.). Every time you visit the site, the content is most likely different because someone else gave a review of that restaurant, or sent out a new tweet, or commented on that image you liked. These are the types of apps you'll be building.
+It's important to note that there are two different types of webapps: static and dynamic. A `static` webapp is one that doesn't change. The content doesn't change unless a developer opens up an HTML file and modifies the content of that file. `Dynamic` webapps are sites where the content changes based on user input (e.g. Facebook, Twitter, Yelp, etc.). Every time you visit the site, the content is most likely different because someone else gave a review of that restaurant, or sent out a new tweet, or commented on that image you liked. These are the types of apps you'll be building.
 
 The flow of request and response changes slightly based on a static or a dynamic webapp. 
 
@@ -122,3 +122,5 @@ It gets a little bit more complex with a webapp. The client makes a request, the
 <a href='https://learn.co/lessons/how-the-web-works-readme' data-visibility='hidden'>View this lesson on Learn.co</a>
 
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/how-the-web-works-readme'>How the Internet Works</a> on Learn.co and start learning to code for free.</p>
+
+<p class='util--hide'>View <a href='https://learn.co/lessons/how-the-web-works-readme'>How the Internet Works</a> on Learn.co and start learning to code for free.</p>
