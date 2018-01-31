@@ -8,6 +8,7 @@
 3. Explain the nature of request and response
 4. Define a static site vs. a dynamic site
 
+Hey Kyle!!
 
 ## Intro
 How many times a day do you use the internet? How many times do you load a different web page? Think about how many times you do this in a year! In order to be a developer-- and especially a web developer-- it's incredibly important to understand how the web works. From here on out, you are no longer just a user of the internet. You are a creator of the web.
