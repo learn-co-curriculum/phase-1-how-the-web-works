@@ -37,8 +37,10 @@ Being able to switch out both the server or the client happens because the way b
 
 In the example above, the client is making an `HTTP GET request` to YouTube's server. YouTube's server then sends back a response and the client renders the page in the browser.
 
-<img src="https://s3.amazonaws.com/learn-verified/requests.png">
-
+<p align="center">
+ <img width="500" src="https://curriculum-content.s3.amazonaws.com/how-the-web-works/Image_17_ComputerServer.png">
+</p>
+ 
 ## Requests
 
 ### URI
@@ -121,5 +123,3 @@ It gets a little bit more complex with a webapp. The client makes a request, the
 <a href='https://learn.co/lessons/how-the-web-works-readme' data-visibility='hidden'>View this lesson on Learn.co</a>
 
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/how-the-web-works-readme'>How the Internet Works</a> on Learn.co and start learning to code for free.</p>
-
-<p class='util--hide'>View <a href='https://learn.co/lessons/how-the-web-works-readme'>How the Internet Works</a> on Learn.co and start learning to code for free.</p>
