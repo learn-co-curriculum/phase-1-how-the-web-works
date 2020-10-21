@@ -118,6 +118,4 @@ The flow of request and response changes slightly based on a static or a dynamic
 
 When the client wants to load a static site, the client makes a request, the server finds the file on a disk, and sends it back. Done and Done.
 
-It gets a little bit more complex with a webapp. The client makes a request, the server runs application code (think of this as your Ruby code), and returns a dynamically generated response. 
-
-<a href='https://learn.co/lessons/how-the-web-works-readme' data-visibility='hidden'>View this lesson on Learn.co</a>
+It gets a little bit more complex with a webapp. The client makes a request, the server runs application code (think of this as your Ruby code), and returns a dynamically generated response.
