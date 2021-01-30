@@ -1,8 +1,6 @@
 # How The Web Works
 
-![](https://s3.amazonaws.com/learn-verified/welcome.gif)
-
-## Objectives
+## Learning Goals
 
 1. Define a client and server
 2. Explain what an HTTP request is
