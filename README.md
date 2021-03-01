@@ -11,7 +11,7 @@
 
 How many times a day do you use the internet? How many times do you load a
 different web page? Think about how many times you do this in a year! In order
-to be a developer-- and especially a web developer-- it's incredibly important
+to be a developer — and especially a web developer — it's incredibly important
 to understand how the web works. From here on out, you are no longer just a user
 of the internet. You are a creator of the web.
 
@@ -25,7 +25,7 @@ https://www.youtube.com/user/AdeleVEVO
 
 Turn into this:
 
-![](https://s3.amazonaws.com/learn-verified/request-intro.png)
+![AdeleVEVO](https://s3.amazonaws.com/learn-verified/request-intro.png)
 
 The internet operates based on conversations between the client (more familiarly
 known as the browser) and the server (the code running the web site you're
@@ -114,17 +114,49 @@ verbs though. What if we want to send some data from the user to the server?
 This is done with a `POST` request. There are a ton of verbs, and we'll go
 further into them later, but here is a full list:
 
-| VERB  | Description |
-| ------------- | ------------- |
-| HEAD  | Asks for a response like a GET but without the body  |
-| GET  | Retrieves a representation of a resource  |
-| POST | Submits data to be processed in the body of the request|
-| PUT | Uploads a representation of a resource in the body of the request |
-| DELETE | Deletes a specific resource| 
-| TRACE | Echoes back the received request | 
-| OPTIONS | Returns the HTTP methods the server supports | 
-| CONNECT | Converts the request to a TCP/IP tunnel (generally for SSL)|
-| PATCH | Apply a partial modification of a resource | 
+<table border="1" cellpadding="4" cellspacing="0">
+  <tr>
+    <th>Verb</th>
+    <th>Description</th>
+  </tr>
+  
+  <tr>
+    <td>HEAD</td>
+    <td>Asks for a response like a GET but without the body</td>
+  </tr>
+  <tr>
+    <td>GET</td>
+    <td>Retrieves a representation of a resource</td>
+  </tr>
+  <tr>
+    <td>POST</td>
+    <td>Submits data to be processed in the body of the request</td>
+  </tr>
+  <tr>
+    <td>PUT</td>
+    <td>Uploads a representation of a resource in the body of the request</td>
+  </tr>
+  <tr>
+    <td>DELETE</td>
+    <td>Deletes a specific resource</td>
+  </tr>
+  <tr>
+    <td>TRACE</td>
+    <td>Echoes back the received request</td>
+  </tr>
+  <tr>
+    <td>OPTIONS</td>
+    <td>Returns the HTTP methods the server supports</td>
+  </tr>
+  <tr>
+    <td>CONNECT</td>
+    <td>Converts the request to a TCP/IP tunnel (generally for SSL)</td>
+  </tr>
+  <tr>
+    <td>PATCH</td>
+    <td>Apply a partial modification of a resource</td>
+  </tr>
+</table>
 
 ### Request Format
 
@@ -140,7 +172,6 @@ domain as well as some other metadata like what type of browser is making this
 request. The request header would look something like this.
 
 ![request header](https://s3.amazonaws.com/learn-verified/request-header.png)
-
 
 ## Responses
 
@@ -188,7 +219,7 @@ or sent out a new tweet, or commented on that image you liked. These are the
 types of apps you'll be building.
 
 The flow of request and response changes slightly based on a static or a dynamic
-webapp. 
+webapp.
 
 When the client wants to load a static site, the client makes a request, the
 server finds the file on a disk, and sends it back. Done and Done.
