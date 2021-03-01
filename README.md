@@ -7,13 +7,15 @@
 3. Explain the nature of request and response
 4. Define a static site vs. a dynamic site
 
-## Intro
+## Introduction
 
 How many times a day do you use the internet? How many times do you load a
-different web page? Think about how many times you do this in a year! In order
-to be a developer — and especially a web developer — it's incredibly important
-to understand how the web works. From here on out, you are no longer just a user
-of the internet. You are a creator of the web.
+different web page? Think about how many times you do this in a year! As a user,
+all you really need to know is the URL to navigate to. You don't need to concern
+yourself with what's going on behind the scenes. But if you want to be a web
+developer, it's important to have some understanding of how the web works. From
+here on out, you are no longer just a user of the internet. You are a creator of
+the web.
 
 ## Client and Server
 
@@ -74,13 +76,13 @@ done through **U**niform **R**esource **I**dentifiers or URIs. You've probably
 also heard these referred to as URLs. Both are fine. Let's look at the URI we
 used up top.
 
-`http://www.youtube.com/adelevevo`
+`http://www.youtube.com/user/adelevevo`
 
 This URI is broken into three parts:
 
 + `http` - the protocol
 + `youtube.com` - the domain
-+ `/adelevevo` - the resource
++ `/user/adelevevo` - the resource
 
 The `protocol` is the way we're sending our request. There are several different
 types of internet protocols (SMTP for emails, HTTPS for secure requests, FTP for
@@ -91,33 +93,31 @@ of the web server that hosts that particular website. This will be things like
 `youtube.com` and `google.com`.
 
 The `resource` is the particular part of the website we want to load. YouTube
-has millions and millions of channels and videos, so the specific resource we
-want is `/adelevevo` (because we can't get Hello out of our heads).
+has millions and millions of channels and videos, so we need to identify the
+specific resource we want: `/user/adelevevo` (because we can't get Hello out of
+our heads).
 
-An analogy that works well is thinking of an apartment building. The domain is
-the entire building. Within that building though there are hundreds of
-apartments. We use the specific resource (sometimes also called a path) to
-figure out that we care about apartment 4E. The numbering/lettering system is
-different for every apartment building, just as the resources are laid out a bit
-differently for every website. For example, if we search for "URI" using Google,
-the path looks like this: `https://www.google.com/search?q=URI`. If we use
-Facebook to execute the same search, it looks like this:
-`https://www.facebook.com/search/top/?q=uri`.
+An analogy that works well is an apartment building. The domain is the entire
+building. Within that building, though, there are hundreds of apartments. We use
+the specific resource (also called a path) to indicate that we care about
+apartment 4E. The numbering/lettering system is different for every apartment
+building, just as the resources are laid out a bit differently for every
+website. For example, if we search for "URI" using Google, the path looks like
+this: `https://www.google.com/search?q=URI`. If we use Facebook to execute the
+same search, it looks like this: `https://www.facebook.com/search/top/?q=uri`.
 
 ### HTTP Verbs
 
-When you're making a request, in addition to the path, you also need to specify
-the action you would like the server to perform. We do this with HTTP Verbs. We
+When making a web request, in addition to the path, you also need to specify the
+action you would like the server to perform. We do this using _HTTP Verbs_. We
 can use the same resource for multiple actions, so it is the **combination** of
 the path and the HTTP verb that fully describes the request.
 
 `GET` requests are the most common browser requests. This just means "hey
-server, please GET me this resource", i.e., load this webpage. There are a few
-other verbs though. What if we want to send some data from the user to the
-server? This is done with a `POST` request.
-
-Below is a list of the available HTTP Verbs and what each is used for. We will
-learn about them a bit later:
+server, please GET me this resource", i.e., load this web page. Other verbs are
+used if we want to send some data from the user to the server, or mnodify or
+delete existing data. Below is a list of the available HTTP Verbs and what each
+is used for. We will learn about them a bit later:
 
 <table border="1" cellpadding="4" cellspacing="0">
   <tr>
@@ -166,15 +166,16 @@ learn about them a bit later:
 ### Request Format
 
 Our client so far has made a request to YouTube's server. In this case, a
-request to `/adelevevo`. The server then responds with all the code associated
-with that resource `<!doctype html> .....</html>`, including all images, CSS
-files, JavaScript files, videos, music, etc.
+request to `/user/adelevevo`. The server then responds with all the code
+associated with that resource (everything between `<!doctype html>` and
+`</html>`), including all images, CSS files, JavaScript files, videos, music,
+etc.
 
 When the client makes a request, it includes other items besides just the URL in
 the "headers." The request header contains all the information the server needs
-in order to fulfill the request: the type of request, the resource (path), and the
-domain, as well as some other metadata like what type of browser is making this
-request. The request header would look something like this.
+in order to fulfill the request: the type of request, the resource (path), and
+the domain, as well as some other metadata. The request header would look
+something like this:
 
 ![request header](https://s3.amazonaws.com/learn-verified/request-header.png)
 
@@ -182,23 +183,26 @@ request. The request header would look something like this.
 
 Once your server receives the request, it will do some processing (run code you
 wrote!) and then send a response back. The server's response is separated into
-two sections, the headers and the body. The server's response headers look
-something like this:
+two sections: the headers and the body.
+
+The server's response headers look something like this:
 
 ![](https://s3.amazonaws.com/learn-verified/response-headers.png)
 
-The headers are all of the metadata about the response. This includes things
+The headers contain all of the metadata about the response. This includes things
 like content-length (how big is my response) and what type of content it is. The
-headers also include the status code of the response. The *body* of the response
-is what you see rendered on the page. It is all of that HTML/CSS that you see!
-Most of the data of a response is in the body, not in the headers.
+headers also include the status code of the response. 
+
+The *body* of the response is what you see rendered on the page. It is all of
+that HTML/CSS that you see! Most of the data of a response is in the body, not
+in the headers.
 
 ### Status Codes
 
-The primary way you know that a web request received was successful is that the
-page loads without any errors. However, you can also tell a request was
-successful if you see that the response header's status code is `200`. You've
-probably seen another common status code, `404`. This means "file not found."
+The primary way you know that a web request was successful is that the page
+loads without any errors. However, you can also tell a request was successful if
+you see that the response header's status code is `200`. You've probably seen
+another common status code, `404`. This means "file not found."
 
 Status codes are separated into categories based on their first digit. Here are
 the different categories:
@@ -229,11 +233,10 @@ It can be helpful to think of static sites as "websites" and dynamic sites as
 difference between them. The terms provide a convenient way to distinguish in a
 non-technical way between sites with static vs. dynamic content.
 
-The flow of request and response is slightly different for a static
-website than for a dynamic webapp.
-
-When the client wants to load a static site, the client makes a request, the
-server finds the file on a disk, and sends it back. Done and Done.
+The flow of request and response is slightly different for a static website than
+for a dynamic webapp. When the client wants to load a static site, the client
+makes a request, the server finds the file on a disk, and sends it back. Done
+and Done.
 
 It gets a little bit more complex with a web app. The client makes a request, the
 server runs application code (think of this as your Ruby code), and returns a
