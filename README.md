@@ -48,7 +48,7 @@ same server. Let's take a closer look at how this occurs.
 
 ## HTTP Overview
 
-Being able to switch out both the server or the client happens because the way
+Being able to switch out both the server and the client happens because the way
 browsers and servers talk is controlled by a contract or *protocol*.
 Specifically it is a protocol created by Tim Berners-Lee called the **H**yper
 **T**ext **T**ransfer **P**rotocol or HTTP. Your server will receive requests
@@ -71,8 +71,8 @@ page in the browser.
 
 When you make a request on the web, how do you know where to send it?  This is
 done through **U**niform **R**esource **I**dentifiers or URIs. You've probably
-also heard of these as URLs. Both are fine. Let's look at the URI we used up
-top.
+also heard these referred to as URLs. Both are fine. Let's look at the URI we
+used up top.
 
 `http://www.youtube.com/adelevevo`
 
@@ -88,7 +88,7 @@ file transfers). To load a website, we use HTTP.
 
 The `domain name` is a string of characters that identifies the unique location
 of the web server that hosts that particular website. This will be things like
-`youtube.com` and `google.com`. 
+`youtube.com` and `google.com`.
 
 The `resource` is the particular part of the website we want to load. YouTube
 has millions and millions of channels and videos, so the specific resource we
@@ -96,23 +96,28 @@ want is `/adelevevo` (because we can't get Hello out of our heads).
 
 An analogy that works well is thinking of an apartment building. The domain is
 the entire building. Within that building though there are hundreds of
-apartments. We use the specific resource (or sometimes called path) to figure
-out that we care about apartment 4E. The numbering/lettering system is different
-for every apartment building, just like how a server has its resources laid out
-is a bit different for every website. For example doing a search on Google ends
-in a URL like this `https://www.google.com/search?q=URI` but searching for URI
-on Facebook leads to this URL `https://www.facebook.com/search/top/?q=uri`.
+apartments. We use the specific resource (sometimes also called a path) to
+figure out that we care about apartment 4E. The numbering/lettering system is
+different for every apartment building, just as the resources are laid out a bit
+differently for every website. For example, if we search for "URI" using Google,
+the path looks like this: `https://www.google.com/search?q=URI`. If we use
+Facebook to execute the same search, it looks like this:
+`https://www.facebook.com/search/top/?q=uri`.
 
 ### HTTP Verbs
 
-When you're making a request, not only do you want to give all the details of
-your request, you also need to specify what action you would like the server to
-do. We do this with HTTP Verbs. With the same resource, you may want more than
-one action to occur. Using a browser, almost all requests are `GET` requests.
-This just means "hey server, please GET me this resource". There are a few other
-verbs though. What if we want to send some data from the user to the server?
-This is done with a `POST` request. There are a ton of verbs, and we'll go
-further into them later, but here is a full list:
+When you're making a request, in addition to the path, you also need to specify
+the action you would like the server to perform. We do this with HTTP Verbs. We
+can use the same resource for multiple actions, so it is the **combination** of
+the path and the HTTP verb that fully describes the request.
+
+`GET` requests are the most common browser requests. This just means "hey
+server, please GET me this resource", i.e., load this webpage. There are a few
+other verbs though. What if we want to send some data from the user to the
+server? This is done with a `POST` request.
+
+Below is a list of the available HTTP Verbs and what each is used for. We will
+learn about them a bit later:
 
 <table border="1" cellpadding="4" cellspacing="0">
   <tr>
@@ -163,12 +168,12 @@ further into them later, but here is a full list:
 Our client so far has made a request to YouTube's server. In this case, a
 request to `/adelevevo`. The server then responds with all the code associated
 with that resource `<!doctype html> .....</html>`, including all images, CSS
-files, JavaScript files, videos, music, etc. 
+files, JavaScript files, videos, music, etc.
 
 When the client makes a request, it includes other items besides just the URL in
 the "headers." The request header contains all the information the server needs
-in order to fulfill the request: the type of request, the resource (path), the
-domain as well as some other metadata like what type of browser is making this
+in order to fulfill the request: the type of request, the resource (path), and the
+domain, as well as some other metadata like what type of browser is making this
 request. The request header would look something like this.
 
 ![request header](https://s3.amazonaws.com/learn-verified/request-header.png)
@@ -176,12 +181,12 @@ request. The request header would look something like this.
 ## Responses
 
 Once your server receives the request, it will do some processing (run code you
-wrote!) and then send a response back. The server's response headers look
+wrote!) and then send a response back. The server's response is separated into
+two sections, the headers and the body. The server's response headers look
 something like this:
 
 ![](https://s3.amazonaws.com/learn-verified/response-headers.png)
 
-The server's response is separated into two sections, the headers and the body.
 The headers are all of the metadata about the response. This includes things
 like content-length (how big is my response) and what type of content it is. The
 headers also include the status code of the response. The *body* of the response
@@ -190,12 +195,13 @@ Most of the data of a response is in the body, not in the headers.
 
 ### Status Codes
 
- Every time there is a successful response (you'll know it's successful because
- the page will load without any errors), it's a status code of `200`, but there
- are other status codes and it's good to get familiar with them. You've probably
- seen the second most popular status code, `404`. This means "file not found."
- Status codes are separated into categories based on their first digit. Here are
- the different categories:
+The primary way you know that a web request received was successful is that the
+page loads without any errors. However, you can also tell a request was
+successful if you see that the response header's status code is `200`. You've
+probably seen another common status code, `404`. This means "file not found."
+
+Status codes are separated into categories based on their first digit. Here are
+the different categories:
 
 + 100's - informational
 + 200's - success
@@ -203,27 +209,32 @@ Most of the data of a response is in the body, not in the headers.
 + 400's - error
 + 500's - server error
 
-A full list of status codes is [up on Wikipedia][codes].
+There are a numnber of other status codes and it's good to get familiar with
+them. You can see a full [list of status codes on Wikipedia][codes].
 
 [codes]: https://en.wikipedia.org/wiki/List_of_HTTP_status_codes
 
-## Servers
+## Static vs. Dynamic Websites
 
-It's important to note that there are two different types of webapps: static and
-dynamic. A `static` webapp is one that doesn't change. The content doesn't
-change unless a developer opens up an HTML file and modifies the content of that
-file. `Dynamic` webapps are sites where the content changes based on user input
-(e.g. Facebook, Twitter, Yelp, etc.). Every time you visit the site, the content
-is most likely different because someone else gave a review of that restaurant,
-or sent out a new tweet, or commented on that image you liked. These are the
-types of apps you'll be building.
+It's important to note that there are two different types of websites: static
+and dynamic. A `static` website is one that doesn't change unless a developer
+opens up an HTML file and modifies the content of that file. `Dynamic` websites
+are sites where the content changes based on user input (e.g. Facebook, Twitter,
+Yelp, etc.). Every time you visit the site, the content you see is most likely
+different than the last time you visited because someone else gave a review of
+that restaurant, or sent out a new tweet, or commented on that image you liked.
 
-The flow of request and response changes slightly based on a static or a dynamic
-webapp.
+It can be helpful to think of static sites as "websites" and dynamic sites as
+"web apps", although there is no official definition of either term or the
+difference between them. The terms provide a convenient way to distinguish in a
+non-technical way between sites with static vs. dynamic content.
+
+The flow of request and response is slightly different for a static
+website than for a dynamic webapp.
 
 When the client wants to load a static site, the client makes a request, the
 server finds the file on a disk, and sends it back. Done and Done.
 
-It gets a little bit more complex with a webapp. The client makes a request, the
+It gets a little bit more complex with a web app. The client makes a request, the
 server runs application code (think of this as your Ruby code), and returns a
 dynamically generated response.
