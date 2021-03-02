@@ -39,10 +39,11 @@ responses. Until today you have always been a client. Moving forward you will be
 building the server. This means processing requests, creating responses, and
 sending them back to the client.
 
-We will be writing our servers using Ruby and a few different frameworks. But
-your browser doesn't know, nor does it care, what server it talks to. How does
-that work? How can a server that was written 15 years ago still work with a
-browser written 15 months or days ago? 
+Servers can be written using a number of different backend programming languages
+(e.g., Ruby) or frameworks (e.g., Ruby on Rails). You browser doesn't know, nor
+does it care, what server it talks to. How does that work? How can a server that
+was written 15 years ago still work with a browser written 15 months or days
+ago?
 
 In addition, you can use multiple clients! You can use Chrome, Safari, Internet
 Explorer, Opera, and many others. All of those browsers are able to talk to the
@@ -201,20 +202,26 @@ in the headers.
 
 The primary way that a human user knows that a web request was successful is
 that the page loads without any errors. However, you can also tell a request was
-successful if you see that the response header's status code is `200`. You've
-probably seen another common status code, `404`. This means "file not found."
+successful if you see that the response header's status code is `200`. That code
+tells the _browser_ that the request was successfully received. You've probably
+seen another common status code, `404`. This means "file not found."
 
-Status codes are separated into categories based on their first digit. Here are
-the different categories:
+The HTTP protocol has an agreed upon contract for different "status codes" that
+are used to let the browser know the status of a request. A status code is a
+3-digit integer where the first digit represents the class of the response, and
+the remaining two digits represent a specific status.
 
-+ 100's - informational
-+ 200's - success
-+ 300's - redirect
-+ 400's - error
-+ 500's - server error
+There are 5 primary values that the first digit can take:
 
-There are a number of other status codes and it's good to get familiar with
-them. You can see a full [list of status codes on Wikipedia][codes].
++ 1xx: Informational (request received and continuing process)
++ 2xx: Success (request successfully received, understood, and accepted)
++ 3xx: Redirection (further action must be taken to complete request)
++ 4xx: Client Error (request contains bad syntax and can't be completed)
++ 5xx: Server Error (server couldn't complete request)
+
+There are a number of other status codes within each category and it's good to
+get familiar with them. You can see a full [list of status codes on
+Wikipedia][codes].
 
 [codes]: https://en.wikipedia.org/wiki/List_of_HTTP_status_codes
 
@@ -238,6 +245,10 @@ for a dynamic web app. When the client wants to load a static site, the client
 makes a request, and the server finds the file on a disk and sends it back. Done
 and Done.
 
-It gets a little bit more complex with a web app. The client makes a request, the
-server runs application code (think of this as your Ruby code), and returns a
-dynamically generated response.
+It gets a little bit more complex with a web app. The client makes a request,
+the server runs application code (backend code written using something like
+Ruby), and returns a dynamically generated response.
+
+## Video Review
+
++ [How the Web Works, Part 1](https://www.youtube.com/watch?v=gI9wqEDPiY0)
