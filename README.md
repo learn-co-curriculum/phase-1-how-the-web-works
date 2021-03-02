@@ -187,11 +187,11 @@ two sections: the headers and the body.
 
 The server's response headers look something like this:
 
-![](https://s3.amazonaws.com/learn-verified/response-headers.png)
+![response header](https://s3.amazonaws.com/learn-verified/response-headers.png)
 
 The headers contain all of the metadata about the response. This includes things
 like content-length (how big is my response) and what type of content it is. The
-headers also include the status code of the response. 
+headers also include the status code of the response.
 
 The *body* of the response is what you see rendered on the page. It is all of
 that HTML/CSS that you see! Most of the data of a response is in the body, not
