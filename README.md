@@ -115,7 +115,7 @@ the path and the HTTP verb that fully describes the request.
 
 `GET` requests are the most common browser requests. This just means "hey
 server, please GET me this resource", i.e., load this web page. Other verbs are
-used if we want to send some data from the user to the server, or mnodify or
+used if we want to send some data from the user to the server, or modify or
 delete existing data. Below is a list of the available HTTP Verbs and what each
 is used for. We will learn about them a bit later:
 
@@ -199,10 +199,10 @@ in the headers.
 
 ### Status Codes
 
-The primary way you know that a web request was successful is that the page
-loads without any errors. However, you can also tell a request was successful if
-you see that the response header's status code is `200`. You've probably seen
-another common status code, `404`. This means "file not found."
+The primary way that a human user knows that a web request was successful is
+that the page loads without any errors. However, you can also tell a request was
+successful if you see that the response header's status code is `200`. You've
+probably seen another common status code, `404`. This means "file not found."
 
 Status codes are separated into categories based on their first digit. Here are
 the different categories:
@@ -213,7 +213,7 @@ the different categories:
 + 400's - error
 + 500's - server error
 
-There are a numnber of other status codes and it's good to get familiar with
+There are a number of other status codes and it's good to get familiar with
 them. You can see a full [list of status codes on Wikipedia][codes].
 
 [codes]: https://en.wikipedia.org/wiki/List_of_HTTP_status_codes
@@ -234,8 +234,8 @@ difference between them. The terms provide a convenient way to distinguish in a
 non-technical way between sites with static vs. dynamic content.
 
 The flow of request and response is slightly different for a static website than
-for a dynamic webapp. When the client wants to load a static site, the client
-makes a request, the server finds the file on a disk, and sends it back. Done
+for a dynamic web app. When the client wants to load a static site, the client
+makes a request, and the server finds the file on a disk and sends it back. Done
 and Done.
 
 It gets a little bit more complex with a web app. The client makes a request, the
