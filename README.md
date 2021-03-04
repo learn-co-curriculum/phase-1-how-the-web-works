@@ -2,10 +2,10 @@
 
 ## Learning Goals
 
-1. Define a client and server
-2. Explain what an HTTP request is
-3. Explain the nature of request and response
-4. Define a static site vs. a dynamic site
+- Define a client and server
+- Explain what an HTTP request is
+- Explain the nature of request and response
+- Define a static site vs. dynamic site
 
 ## Introduction
 
@@ -81,9 +81,9 @@ used up top.
 
 This URI is broken into three parts:
 
-+ `http` - the protocol
-+ `youtube.com` - the domain
-+ `/user/adelevevo` - the resource
+- `http` - the protocol
+- `youtube.com` - the domain
+- `/user/adelevevo` - the resource
 
 The `protocol` is the way we're sending our request. There are several different
 types of internet protocols (SMTP for emails, HTTPS for secure requests, FTP for
@@ -213,11 +213,11 @@ the remaining two digits represent a specific status.
 
 There are 5 primary values that the first digit can take:
 
-+ 1xx: Informational (request received and continuing process)
-+ 2xx: Success (request successfully received, understood, and accepted)
-+ 3xx: Redirection (further action must be taken to complete request)
-+ 4xx: Client Error (request contains bad syntax and can't be completed)
-+ 5xx: Server Error (server couldn't complete request)
+- 1xx: Informational (request received and continuing process)
+- 2xx: Success (request successfully received, understood, and accepted)
+- 3xx: Redirection (further action must be taken to complete request)
+- 4xx: Client Error (request contains bad syntax and can't be completed)
+- 5xx: Server Error (server couldn't complete request)
 
 There are a number of other status codes within each category and it's good to
 get familiar with them. You can see a full [list of status codes on
@@ -251,4 +251,4 @@ Ruby), and returns a dynamically generated response.
 
 ## Video Review
 
-+ [How the Web Works, Part 1](https://www.youtube.com/watch?v=gI9wqEDPiY0)
+- [How the Web Works, Part 1](https://www.youtube.com/watch?v=gI9wqEDPiY0)
