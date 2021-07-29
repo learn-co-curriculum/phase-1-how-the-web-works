@@ -248,7 +248,3 @@ and Done.
 It gets a little bit more complex with a web app. The client makes a request,
 the server runs application code (backend code written using something like
 Ruby), and returns a dynamically generated response.
-
-## Video Review
-
-- [How the Web Works, Part 1](https://www.youtube.com/watch?v=gI9wqEDPiY0)
