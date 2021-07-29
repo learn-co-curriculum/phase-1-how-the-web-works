@@ -40,7 +40,7 @@ building the server. This means processing requests, creating responses, and
 sending them back to the client.
 
 Servers can be written using a number of different backend programming languages
-(e.g., Ruby) or frameworks (e.g., Ruby on Rails). You browser doesn't know, nor
+(e.g., Ruby) or frameworks (e.g., Ruby on Rails). Your browser doesn't know, nor
 does it care, what server it talks to. How does that work? How can a server that
 was written 15 years ago still work with a browser written 15 months or days
 ago?
