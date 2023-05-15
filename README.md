@@ -10,12 +10,15 @@
 ## Introduction
 
 How many times a day do you use the internet? How many times do you load a
-different web page? Think about how many times you do this in a year! As a user,
-all you really need to know is the URL to navigate to. You don't need to concern
-yourself with what's going on behind the scenes. But if you want to be a web
-developer, it's important to have some understanding of how the web works. From
-here on out, you are no longer just a user of the internet. You are a creator of
-the web.
+different web page? Think about how many times you do this in a year!
+
+As a user, all you really need to know is the URL of the website you want to
+visit - <www.google.com>, for example. You don't need to concern yourself with
+what's going on behind the scenes.
+
+Web developers, other other hand, need to know the fundamentals of how the web
+works. From here on out, you are no longer just a user of the internet - you are
+a creator of the web!
 
 ## Client and Server
 
@@ -27,19 +30,49 @@ https://github.com/learn-co-curriculum/phase-1-how-the-web-works
 
 Turn into this:
 
-![Github Readme](https://curriculum-content.s3.amazonaws.com/phase-1/how-the-web-works-readme/github-readme.png)
+![Github
+Readme](https://curriculum-content.s3.amazonaws.com/phase-1/how-the-web-works-readme/github-readme.png)
 
-The internet operates based on conversations between the client (more familiarly
-known as the browser) and the server (the code running the web site you're
-trying to load). By typing in that URL into your browser, you (the client) are
-_requesting_ a web page. The server then receives the request, processes it, and
-sends a _response_. Your browser receives that response and shows it to you.
+The internet operates based on conversations between the client and the server. 
 
-These are the fundamentals of the web. Browsers send requests, and servers send
-responses. Later in the program, we will be writing our servers using Ruby and a
-few different frameworks. But your browser doesn't know, nor does it care, what
-server it talks to. How does that work? How can a server that was written 15
-years ago still work with a browser written 15 months or days ago?
+We've already been working with the client - it's the browser! Although client
+can refer to any sort of visual interface that a user interacts with - like apps
+on a mobile phone, for example.
+
+Clients are responsible for displaying a website and handling user interaction.
+At this point, we're writing "client-side" code - code that runs in our client,
+the browser, that structures and styles our webpage and makes it interactive and
+dynamic.
+
+Servers have a different job - they're computers that are responsible for
+storing the files of our website, communicating with databases, and running the
+code that makes our website accessible over the internet.
+
+Servers do a lot! You can think of them as a "home base" for our websites -
+they're where our websites actually live!
+
+Clients and servers work together - by typing a URL into your browser, you (the
+client) are _requesting_ a web page. The server then receives the request,
+processes it, and sends a _response_ containing your client-side code - HTML,
+JavaScript, and CSS files. Your browser receives that response and uses the
+client-side code you wrote to display your website.
+
+These are the fundamentals of the web. Browsers send requests and servers send
+responses.
+
+Just as we're currently writing "client-side" code, we can also write
+"server-side" code that tells our server what it's supposed to do - how to
+handle specific requests, for example. Writing client-side code is known as
+"Frontend" development, while writing server-side code is known as "Backend"
+development.
+
+We can write server-side code in a wide variety of programming languages!
+Python, JavaScript, Ruby, Java, PHP, C#, Go - the list goes on!
+
+But, your browser doesn't know, nor does it care, what kind of server it talks
+to. It can communicate with servers written in any language! How does that work?
+How can a server that was written 15 years ago still work with a browser written
+15 months or days ago?
 
 In addition, you can use multiple clients! You can use Chrome, Safari, Firefox,
 Edge, and many others. All of those browsers are able to talk to the same
@@ -49,10 +82,10 @@ servers. Let's take a closer look at how this occurs.
 
 Communication between different clients and different servers is only possible
 because the way browsers and servers talk is controlled by a contract, or
-_protocol_. Specifically, it is a protocol created by
-[Tim Berners-Lee][sir tim] called **Hyper Text Transfer Protocol**, or HTTP.
-Your server will receive requests from the browser that follow HTTP. It then
-responds with an HTTP response that all browsers are able to parse.
+_protocol_. Specifically, it is a protocol created by [Tim Berners-Lee][sir tim]
+called **Hyper Text Transfer Protocol**, or HTTP. Your server will receive
+requests from the browser that follow HTTP. It then responds with an HTTP
+response that all browsers are able to parse.
 
 HTTP is the "language" browsers speak. Every time you load a web page, you are
 making an HTTP **request** to the site's server, and the server sends back an
@@ -63,7 +96,8 @@ In the example above, the client is making an **HTTP GET request** to GitHub's
 server. GitHub's server then sends back a response and the client renders the
 page in the browser.
 
-![computer server](https://curriculum-content.s3.amazonaws.com/how-the-web-works/Image_17_ComputerServer.png)
+![computer
+server](https://curriculum-content.s3.amazonaws.com/how-the-web-works/Image_17_ComputerServer.png)
 
 ## Requests
 
@@ -88,9 +122,9 @@ The **protocol** is the format we're using to send our request. There are
 several different types of internet protocols (SMTP for emails, HTTPS for secure
 requests, FTP for file transfers). To load a website, we use HTTP or HTTPS.
 
-The **domain name** is a string of characters that identifies the unique location
-of the web server that hosts that particular website. This will be things like
-`youtube.com` and `google.com`.
+The **domain name** is a string of characters that identifies the unique
+location of the web server that hosts that particular website. This will be
+things like `youtube.com` and `google.com`.
 
 The **path** is the particular part of the website we want to load. GitHub has
 millions and millions of users and repositories, so we need to identify the
@@ -112,12 +146,12 @@ You can learn more about the [anatomy of a URL from MDN][url anatomy].
 ### HTTP Verbs
 
 When making a web request, in addition to the path, you also need to specify the
-action you would like the server to perform. We do this using
-[**HTTP Verbs**][verbs], also referred to as **request methods**. We can use the
-same path for multiple actions, so it is the **combination** of the path and the
-HTTP verb (method) that _fully_ describes the request. For example, making a
-**POST** request to `/learn-co-curriculum/phase-1-how-the-web-works`
-tells the server something different from making a **GET** request to
+action you would like the server to perform. We do this using [**HTTP
+Verbs**][verbs], also referred to as **request methods**. We can use the same
+path for multiple actions, so it is the **combination** of the path and the HTTP
+verb (method) that _fully_ describes the request. For example, making a **POST**
+request to `/learn-co-curriculum/phase-1-how-the-web-works` tells the server
+something different from making a **GET** request to
 `/learn-co-curriculum/phase-1-how-the-web-works`.
 
 **GET** requests are the most common browser requests. This just means "hey
@@ -141,10 +175,10 @@ is used for by convention. We will learn about them a bit later:
 ### Request Format
 
 Our client so far has made a request to GitHub's server. In this case, a GET
-request to `/learn-co-curriculum/phase-1-how-the-web-works`. The server
-then responds with all the code associated with that resource (everything
-between `<!doctype html>` and `</html>`), including all images, CSS files,
-JavaScript files, videos, music, etc.
+request to `/learn-co-curriculum/phase-1-how-the-web-works`. The server then
+responds with all the code associated with that resource (everything between
+`<!doctype html>` and `</html>`), including all images, CSS files, JavaScript
+files, videos, music, etc.
 
 When the client makes a request, it includes additional "metadata" about the
 request, besides just the URL, in the **request headers**. The request headers
@@ -152,7 +186,8 @@ contain all the information the server needs in order to fulfill the request:
 the HTTP verb (method), the resource (path), and the domain (authority), as well
 as some other metadata. The request headers look something like this:
 
-![request headers](https://curriculum-content.s3.amazonaws.com/phase-1/how-the-web-works-readme/request-headers.png)
+![request
+headers](https://curriculum-content.s3.amazonaws.com/phase-1/how-the-web-works-readme/request-headers.png)
 
 You can check out the request/response data for any website in the Network tab
 in the browser dev tools — open the Network tab; refresh the page; then click
@@ -167,7 +202,8 @@ the **body**.
 
 The server's **response headers** look something like this:
 
-![response headers](https://curriculum-content.s3.amazonaws.com/phase-1/how-the-web-works-readme/response-headers.png)
+![response
+headers](https://curriculum-content.s3.amazonaws.com/phase-1/how-the-web-works-readme/response-headers.png)
 
 The headers contain all of the metadata about the response. This includes things
 like `content-length` (how big is my response) and what the `content-type` of
@@ -222,6 +258,7 @@ Ruby — it's important to know these rules.
 - [HTTP Status Codes][codes]
 
 [sir tim]: https://www.w3.org/People/Berners-Lee/
-[url anatomy]: https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_URL
+[url anatomy]:
+    https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_URL
 [verbs]: https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods
 [codes]: https://en.wikipedia.org/wiki/List_of_HTTP_status_codes
