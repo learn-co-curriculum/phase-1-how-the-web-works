@@ -33,11 +33,12 @@ Turn into this:
 ![Github
 Readme](https://curriculum-content.s3.amazonaws.com/phase-1/how-the-web-works-readme/github-readme.png)
 
-The internet operates based on conversations between the client and the server. 
+The internet operates based on conversations between the client and the server.
 
-We've already been working with the client - it's the browser! Although client
-can refer to any sort of visual interface that a user interacts with - like apps
-on a mobile phone, for example.
+We've already been working with the client - it's the browser! In reality,
+client can refer to any sort of visual interface that a user interacts with -
+like apps on a mobile phone, for example. But for our purposes as web
+developers, the client will be the browser.
 
 Clients are responsible for displaying a website and handling user interaction.
 At this point, we're writing "client-side" code - code that runs in our client,
@@ -53,9 +54,9 @@ they're where our websites actually live!
 
 Clients and servers work together - by typing a URL into your browser, you (the
 client) are _requesting_ a web page. The server then receives the request,
-processes it, and sends a _response_ containing your client-side code - HTML,
-JavaScript, and CSS files. Your browser receives that response and uses the
-client-side code you wrote to display your website.
+processes it, and sends a _response_ containing the client-side code for that
+webpage - HTML, JavaScript, and CSS files. Your browser receives that response
+and uses the client-side code to display the website.
 
 These are the fundamentals of the web. Browsers send requests and servers send
 responses.
@@ -66,35 +67,43 @@ handle specific requests, for example. Writing client-side code is known as
 "Frontend" development, while writing server-side code is known as "Backend"
 development.
 
-We can write server-side code in a wide variety of programming languages!
+We can write server-side code in a wide variety of programming languages.
 Python, JavaScript, Ruby, Java, PHP, C#, Go - the list goes on!
 
 But, your browser doesn't know, nor does it care, what kind of server it talks
 to. It can communicate with servers written in any language! How does that work?
 How can a server that was written 15 years ago still work with a browser written
-15 months or days ago?
+2 years ago?
 
-In addition, you can use multiple clients! You can use Chrome, Safari, Firefox,
-Edge, and many others. All of those browsers are able to talk to the same
-servers. Let's take a closer look at how this occurs.
+On top of that, you can use multiple clients! You can use Chrome, Safari,
+Firefox, Edge, and many others. All of those browsers are able to talk to the
+same servers. Let's take a closer look at how this works.
 
 ## HTTP Overview
 
 Communication between different clients and different servers is only possible
-because the way browsers and servers talk is controlled by a contract, or
-_protocol_. Specifically, it is a protocol created by [Tim Berners-Lee][sir tim]
-called **Hyper Text Transfer Protocol**, or HTTP. Your server will receive
-requests from the browser that follow HTTP. It then responds with an HTTP
-response that all browsers are able to parse.
+because the way browsers and servers communicate is controlled by a _protocol_.
 
-HTTP is the "language" browsers speak. Every time you load a web page, you are
-making an HTTP **request** to the site's server, and the server sends back an
-HTTP **response**. When you use `fetch` in JavaScript, you are also making an
-HTTP request.
+In computer science, a _protocol_ is simply a set of rules and procedures that
+dictates how information is transmitted between different computers.
 
-In the example above, the client is making an **HTTP GET request** to GitHub's
-server. GitHub's server then sends back a response and the client renders the
-page in the browser.
+The web uses a specific type of protocol, originally created by [Tim
+Berners-Lee][sir tim]. This protocol is call the **Hyper Text Transfer
+Protocol**, or **HTTP**.
+
+All browsers and all servers are set up to use HTTP - it's the common protocol
+of the web that allows clients and servers of all types to communicate with each
+other.
+
+Every time you load a web page, you are making an HTTP **request** to the site's
+server. The server then sends back an HTTP **response**.
+
+Once you start using `fetch` in JavaScript, you will be writing your own HTTP
+requests!
+
+In the GitHub example above, the client is making an **HTTP GET request** to
+GitHub's server. GitHub's server then sends back a response and the client
+renders the page in the browser.
 
 ![computer
 server](https://curriculum-content.s3.amazonaws.com/how-the-web-works/Image_17_ComputerServer.png)
@@ -105,8 +114,10 @@ server](https://curriculum-content.s3.amazonaws.com/how-the-web-works/Image_17_C
 
 When you make a request on the web, how do you know where to send it? This is
 done through **Uniform Resource Locators**, or URLs. You may have also heard
-these addresses referred to as URIs (Uniform Resource Identifiers). Both are
-fine. Let's look at the URL we used up top:
+these addresses referred to as URIs (Uniform Resource Identifiers). Both names
+are fine.
+
+Let's look at the URL we used up top:
 
 ```txt
 https://github.com/learn-co-curriculum/phase-1-how-the-web-works
@@ -119,46 +130,54 @@ This URL is broken into three parts:
 - `/learn-co-curriculum/phase-1-how-the-web-works` - the path
 
 The **protocol** is the format we're using to send our request. There are
-several different types of internet protocols (SMTP for emails, HTTPS for secure
-requests, FTP for file transfers). To load a website, we use HTTP or HTTPS.
+actually several different types of internet protocols (SMTP for emails, HTTPS
+for secure requests, FTP for file transfers). To load a website, we use HTTP or
+HTTPS.
 
 The **domain name** is a string of characters that identifies the unique
-location of the web server that hosts that particular website. This will be
-things like `youtube.com` and `google.com`.
+location of the web server that hosts that particular website. This could be
+something like `youtube.com` or `google.com`.
 
 The **path** is the particular part of the website we want to load. GitHub has
 millions and millions of users and repositories, so we need to identify the
 specific resource we want using the path:
 `/learn-co-curriculum/phase-1-how-the-web-works`.
 
-For an analogy for how a URL works, think about an apartment building. The
-**domain** is the entire building. Within that building, though, there are
+Let's think about this using a real world example - an apartment building!
+
+The **domain** is the entire building. Within that building, though, there are
 hundreds of apartments. We use the specific **path** (also called a resource) to
-indicate that we care about apartment 4E. The numbering/lettering system is
-different for every apartment building, just as the resources are laid out a bit
-differently for every website. For example, if we search for "URI" using Google,
-the path looks like this: `https://www.google.com/search?q=URI`. If we use
-Facebook to execute the same search, it looks like this:
-`https://www.facebook.com/search/top/?q=uri`.
+indicate that we care about apartment 4E.
+
+The numbering/lettering system is different for every apartment building, just
+as the resources are laid out a bit differently for every website. For example,
+if we search for "URI" using Google, the path looks like this:
+`https://www.google.com/search?q=URI`. If we use Facebook to execute the same
+search, it looks like this: `https://www.facebook.com/search/top/?q=uri`.
 
 You can learn more about the [anatomy of a URL from MDN][url anatomy].
 
 ### HTTP Verbs
 
 When making a web request, in addition to the path, you also need to specify the
-action you would like the server to perform. We do this using [**HTTP
-Verbs**][verbs], also referred to as **request methods**. We can use the same
-path for multiple actions, so it is the **combination** of the path and the HTTP
-verb (method) that _fully_ describes the request. For example, making a **POST**
-request to `/learn-co-curriculum/phase-1-how-the-web-works` tells the server
-something different from making a **GET** request to
+action you would like the server to perform.
+
+We do this using [**HTTP Verbs**][verbs], which are also known as **request
+methods**.
+
+We can use the same path for multiple actions, so it is the **combination** of
+the path and the HTTP verb (method) that _fully_ describes the request.
+
+For example, making a **POST** request to
+`/learn-co-curriculum/phase-1-how-the-web-works` tells the server something
+different from making a **GET** request to
 `/learn-co-curriculum/phase-1-how-the-web-works`.
 
 **GET** requests are the most common browser requests. This just means "hey
 server, please _GET_ me this resource", i.e., load this web page. Other verbs
 are used if we want to send some data from the user to the server, or modify or
 delete existing data. Below is a list of the available HTTP Verbs and what each
-is used for by convention. We will learn about them a bit later:
+is conventionally used for. We will learn more about them a bit later:
 
 | Verb    | Description                                                               |
 | ------- | ------------------------------------------------------------------------- |
@@ -195,10 +214,9 @@ the top listing to see information about the request and response.
 
 ## Responses
 
-Once a server receives the request, it will do some processing (when you write
-the servers, that means it'll run code you wrote!) and then send a response
-back. The server's response is separated into two sections: the **headers** and
-the **body**.
+Once a server receives the request, it will do some processing using server-side
+code and then send a response back. The server's response is separated into two
+sections: the **headers** and the **body**.
 
 The server's **response headers** look something like this:
 
