@@ -235,10 +235,11 @@ in the headers.
 The body of the request can come in many different formats. For a website, the
 format will be HTML. For a web API, the format will probably be JSON (JavaScript
 Object Notation) or XML (eXtensible Markup Language), which are useful formats
-for transmitting structured data. In all cases, the **body** of the HTTP
-response is **just a string of text** — it's up to the client to use that string
-to build a graphical representation of the website, or parse the JSON response
-into another format.
+for transmitting structured data.
+
+In all cases, the **body** of the HTTP response is **just a string of text** —
+it's up to the client to use that string to build a graphical representation of
+the website, or parse the JSON response into another format.
 
 ### Status Codes
 
@@ -262,12 +263,11 @@ them. You can see a full [list of status codes on Wikipedia][codes].
 
 ## Conclusion
 
-Later in the program, you'll learn more about how web servers work (and even how
-to build your own!) — but for now, it's important to understand some of these
-key concepts, like the request-response cycle; URLs; HTTP verbs; and status
-codes. These are the rules of the internet. When building applications — whether
-they're client-side applications in JavaScript, or server-side applications in
-Ruby — it's important to know these rules.
+At this point, we're only writing client-side code, but it's important to
+understand some of these key concepts, like the request-response cycle; URLs;
+HTTP verbs; and status codes. These are the rules of the internet. When building
+applications — whether they're client-side applications in JavaScript, or
+server-side applications in Python — it's important to know these rules.
 
 ## Resources
 
