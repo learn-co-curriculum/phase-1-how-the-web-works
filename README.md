@@ -276,13 +276,10 @@ a full [list of status codes on Wikipedia][codes].
 ## Conclusion
 
 At this point, we're only writing client-side code, but it's still important to
-understand some of these key concepts.
-
-In this lesson, we discussed some
-fundamental aspects of the web, like the request-response cycle; URLs; HTTP
+understand the following key concepts: the request-response cycle; URLs; HTTP
 verbs; and status codes. These are the rules of the internet.
 
-When building
+When building web
 applications — whether they're client-side applications in JavaScript, or
 server-side applications in Python — it's important to know these rules.
 
