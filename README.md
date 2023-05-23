@@ -2,7 +2,6 @@
 
 ## Learning Goals
 
-- Define a client and server
 - Explain what an HTTP request is
 - Explain the nature of request and response
 - Define a static site vs. a dynamic site
@@ -35,37 +34,21 @@ Readme](https://curriculum-content.s3.amazonaws.com/phase-1/how-the-web-works-re
 
 The internet operates based on conversations between the client and the server.
 
-We've already been working with the client - it's the browser! In reality,
-client can refer to any sort of visual interface that a user interacts with -
-like apps on a mobile phone, for example. But for our purposes as web
-developers, the client will be the browser.
-
-Clients are responsible for displaying a website and handling user interaction.
-At this point, we're writing "client-side" code - code that runs in our client,
-the browser, that structures and styles our webpage and makes it interactive and
-dynamic.
-
-Servers have a different job - they're computers that are responsible for
-storing the files of our website, communicating with databases, and running the
-code that makes our website accessible over the internet.
-
-Servers do a lot! You can think of them as a "home base" for our websites -
-they're where our websites actually live!
-
-Clients and servers work together - by typing a URL into your browser, you (the
-client) are _requesting_ a web page. The server then receives the request,
-processes it, and sends a _response_ containing the client-side code for that
-webpage - HTML, JavaScript, and CSS files. Your browser receives that response
-and uses the client-side code to display the website.
+As we discussed in the previous lesson, clients and servers work together. By
+typing a URL into your browser, you (the client) are _requesting_ a web page.
+The server then receives the request, processes it, and sends a _response_
+containing the client-side code for that webpage - HTML, JavaScript, and CSS
+files. Your browser receives that response and uses the client-side code to
+display the website.
 
 These are the fundamentals of the web. Browsers send requests and servers send
 responses.
 
-Just as we're currently writing "client-side" code, we can also write
-"server-side" code that tells our server what it's supposed to do - how to
-handle specific requests, for example. Writing client-side code is known as
-"Frontend" development, while writing server-side code is known as "Backend"
-development.
+Just as we're currently writing _client-side_ code, we can also write
+_server-side_ code that tells our server what it's supposed to do - how to
+handle specific requests from a client, for example. Writing client-side code is
+known as _Frontend_ development, while writing server-side code is known as
+_Backend_ development.
 
 We can write server-side code in a wide variety of programming languages.
 Python, JavaScript, Ruby, Java, PHP, C#, Go - the list goes on!
@@ -82,7 +65,7 @@ same servers. Let's take a closer look at how this works.
 ## HTTP Overview
 
 Communication between different clients and different servers is only possible
-because the way browsers and servers communicate is controlled by a _protocol_.
+because communcation between browsers and servers is controlled by a _protocol_.
 
 In computer science, a _protocol_ is simply a set of rules and procedures that
 dictates how information is transmitted between different computers.
@@ -105,7 +88,7 @@ In the GitHub example above, the client is making an **HTTP GET request** to
 GitHub's server. GitHub's server then sends back a response and the client
 renders the page in the browser.
 
-The diagram below shows the basic steps that clients and servers take to
+The diagram below shows how clients and servers communicate with each other to
 complete an HTTP request.
 
 ![computer
