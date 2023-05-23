@@ -16,7 +16,7 @@ As a user, all you really need to know is the URL of the website you want to
 visit - [www.google.com](www.google.com), for example. You don't need to concern
 yourself with what's going on behind the scenes.
 
-Web developers, other other hand, need to know the fundamentals of how the web
+Web developers, on the other hand, need to know the fundamentals of how the web
 works. From here on out, you are no longer just a user of the internet - you are
 a creator of the web!
 
@@ -91,9 +91,9 @@ The web uses a specific type of protocol, originally created by [Tim
 Berners-Lee][sir tim]. This protocol is call the **Hyper Text Transfer
 Protocol**, or **HTTP**.
 
-All browsers and all servers are set up to use HTTP - it's the common protocol
-of the web that allows clients and servers of all types to communicate with each
-other.
+All browsers and all servers are set up to use HTTP - it's one of the common
+protocols of the web that allows clients and servers of all types to communicate
+with each other.
 
 Every time you load a web page, you are making an HTTP **request** to the site's
 server. The server then sends back an HTTP **response**.
@@ -104,6 +104,9 @@ requests!
 In the GitHub example above, the client is making an **HTTP GET request** to
 GitHub's server. GitHub's server then sends back a response and the client
 renders the page in the browser.
+
+The diagram below shows the basic steps that clients and servers take to
+complete an HTTP request.
 
 ![computer
 server](https://curriculum-content.s3.amazonaws.com/how-the-web-works/Image_17_ComputerServer.png)
@@ -165,19 +168,23 @@ action you would like the server to perform.
 We do this using [**HTTP Verbs**][verbs], which are also known as **request
 methods**.
 
-We can use the same path for multiple actions, so it is the **combination** of
-the path and the HTTP verb (method) that _fully_ describes the request.
+We can use the same path for multiple actions, but we can make different types
+of requests to that same path using different HTTP verbs. It is the
+**combination** of the path and the HTTP verb (method) that _fully_ describes
+the request.
 
 For example, making a **POST** request to
 `/learn-co-curriculum/phase-1-how-the-web-works` tells the server something
-different from making a **GET** request to
+different than making a **GET** request to
 `/learn-co-curriculum/phase-1-how-the-web-works`.
 
 **GET** requests are the most common browser requests. This just means "hey
-server, please _GET_ me this resource", i.e., load this web page. Other verbs
-are used if we want to send some data from the user to the server, or modify or
-delete existing data. Below is a list of the available HTTP Verbs and what each
-is conventionally used for. We will learn more about them a bit later:
+server, please _GET_ me this resource", i.e., load this web page.
+
+Other verbs are used if we want to send some data from the user to the server,
+or modify or delete existing data. Below is a list of the available HTTP Verbs
+and what each is conventionally used for. We will learn more about them a bit
+later:
 
 | Verb    | Description                                                               |
 | ------- | ------------------------------------------------------------------------- |
@@ -200,10 +207,12 @@ responds with all the code associated with that resource (everything between
 files, videos, music, etc.
 
 When the client makes a request, it includes additional "metadata" about the
-request, besides just the URL, in the **request headers**. The request headers
-contain all the information the server needs in order to fulfill the request:
-the HTTP verb (method), the resource (path), and the domain (authority), as well
-as some other metadata. The request headers look something like this:
+request, besides just the URL, in the **request headers**.
+
+The request headers contain all the information the server needs in order to
+fulfill the request: the HTTP verb (method), the resource (path), and the domain
+(authority), as well as some other metadata. The request headers look something
+like this:
 
 ![request
 headers](https://curriculum-content.s3.amazonaws.com/phase-1/how-the-web-works-readme/request-headers.png)
@@ -243,11 +252,13 @@ the website, or parse the JSON response into another format.
 
 ### Status Codes
 
-The primary way that a human user knows that a web request was successful is
-that the page loads without any errors. However, you can also tell a request was
-successful if you see that the response header's status code is `200`. You've
-probably seen another common status code, `404`. This means "resource not
-found."
+When human users interact with a website, they generally only pay attention to
+whether or not the website loads successfully. If it does, then their web
+request was a success - if it doesn't then something went wrong.
+
+However, you can also tell a request was successful if you see that the response
+header's status code is `200`. You've probably seen another common status code,
+`404`. This means "resource not found."
 
 Status codes are separated into categories based on their first digit. Here are
 the different categories:
@@ -258,14 +269,20 @@ the different categories:
 - 400's - error
 - 500's - server error
 
-There are a number of other status codes and it's good to get familiar with
-them. You can see a full [list of status codes on Wikipedia][codes].
+There are a number of other status codes - it's a good idea to familiarize
+yourself with them and you continue on your web development journey. You can see
+a full [list of status codes on Wikipedia][codes].
 
 ## Conclusion
 
-At this point, we're only writing client-side code, but it's important to
-understand some of these key concepts, like the request-response cycle; URLs;
-HTTP verbs; and status codes. These are the rules of the internet. When building
+At this point, we're only writing client-side code, but it's still important to
+understand some of these key concepts.
+
+In this lesson, we discussed some
+fundamental asepcts of the web, like the request-response cycle; URLs; HTTP
+verbs; and status codes. These are the rules of the internet.
+
+When building
 applications — whether they're client-side applications in JavaScript, or
 server-side applications in Python — it's important to know these rules.
 
