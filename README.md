@@ -256,9 +256,9 @@ When human users interact with a website, they generally only pay attention to
 whether or not the website loads successfully. If it does, then their web
 request was a success - if it doesn't, then something went wrong.
 
-However, you can also tell a request was successful if the response
-header's status code is `200`. You've probably seen another common status code,
-`404`. This means "resource not found."
+However, you can also tell a request was successful if the response header's
+status code is `200`. You've probably seen another common status code, `404`.
+This means "resource not found."
 
 Status codes are separated into categories based on their first digit. Here are
 the different categories:
@@ -279,9 +279,9 @@ At this point, we're only writing client-side code, but it's still important to
 understand the following key concepts: the request-response cycle; URLs; HTTP
 verbs; and status codes. These are the rules of the internet.
 
-When building web
-applications — whether they're client-side applications in JavaScript, or
-server-side applications in Python — it's important to know these rules.
+When building web applications — whether they're client-side applications in
+JavaScript, or server-side applications in Python — it's essential for us to
+know and follow these rules!
 
 ## Resources
 
