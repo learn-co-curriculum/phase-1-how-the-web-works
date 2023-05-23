@@ -256,7 +256,7 @@ When human users interact with a website, they generally only pay attention to
 whether or not the website loads successfully. If it does, then their web
 request was a success - if it doesn't, then something went wrong.
 
-However, you can also tell a request was successful if you see that the response
+However, you can also tell a request was successful if the response
 header's status code is `200`. You've probably seen another common status code,
 `404`. This means "resource not found."
 
@@ -270,7 +270,7 @@ the different categories:
 - 500's - server error
 
 There are a number of other status codes - it's a good idea to familiarize
-yourself with them and you continue on your web development journey. You can see
+yourself with them as you continue on your web development journey. You can see
 a full [list of status codes on Wikipedia][codes].
 
 ## Conclusion
