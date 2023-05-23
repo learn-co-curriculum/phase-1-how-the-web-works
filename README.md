@@ -254,7 +254,7 @@ the website, or parse the JSON response into another format.
 
 When human users interact with a website, they generally only pay attention to
 whether or not the website loads successfully. If it does, then their web
-request was a success - if it doesn't then something went wrong.
+request was a success - if it doesn't, then something went wrong.
 
 However, you can also tell a request was successful if you see that the response
 header's status code is `200`. You've probably seen another common status code,
