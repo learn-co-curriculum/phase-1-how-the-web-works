@@ -279,7 +279,7 @@ At this point, we're only writing client-side code, but it's still important to
 understand some of these key concepts.
 
 In this lesson, we discussed some
-fundamental asepcts of the web, like the request-response cycle; URLs; HTTP
+fundamental aspects of the web, like the request-response cycle; URLs; HTTP
 verbs; and status codes. These are the rules of the internet.
 
 When building
