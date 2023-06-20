@@ -78,7 +78,7 @@ Berners-Lee][sir tim]: **Hyper Text Transfer
 Protocol**, or **HTTP**.
 
 All browsers and all servers are set up to use HTTP - it's what
-protocols of the web that allows clients and servers of all types to communicate
+allows clients and servers of all types to communicate
 with each other.
 
 Every time you load a web page, you are making an HTTP **request** to the site's
@@ -97,7 +97,7 @@ complete an HTTP request.
 ![computer
 server](https://curriculum-content.s3.amazonaws.com/how-the-web-works/Image_17_ComputerServer.png)
 
-## Requests
+## HTTP Requests
 
 ### URL
 
@@ -116,7 +116,7 @@ This URL is broken into three parts:
 
 - `https` - the protocol
 - `github.com` - the domain name
-- `/learn-co-curriculum/phase-1-how-the-web-works` - the path
+- `/learn-co-curriculum/phase-1-how-the-web-works` — the path
 
 The **protocol** is the format we're using to send our request. There are
 actually several different types of internet protocols (SMTP for emails, HTTPS
@@ -154,8 +154,8 @@ action you would like the server to perform.
 We do this using [**HTTP Verbs**][verbs], which are also known as **request
 methods**.
 
-We can use the same path for multiple actions, but we can make different types
-of requests to that same path using different HTTP verbs. It is the
+We can use the same path for multiple actions by using different HTTP verbs to make different types
+of requests to that same path. It is the
 **combination** of the path and the HTTP verb (method) that _fully_ describes
 the request.
 
@@ -168,9 +168,9 @@ different than making a **GET** request to
 server, please _GET_ me this resource", i.e., load this web page.
 
 Other verbs are used if we want to send some data from the user to the server,
-or modify or delete existing data. Below is a list of the available HTTP Verbs
+or modify or delete existing data. Below is a list of the available HTTP verbs
 and what each is conventionally used for. We will learn more about them a bit
-later:
+later.
 
 | Verb    | Description                                                               |
 | ------- | ------------------------------------------------------------------------- |
@@ -204,7 +204,7 @@ like this:
 headers](https://curriculum-content.s3.amazonaws.com/phase-1/how-the-web-works-readme/request-headers.png)
 
 You can check out the request/response data for any website in the Network tab
-in the browser dev tools — open the Network tab; refresh the page; then click
+in the browser dev tools: open the Network tab, refresh the page, then click
 the top listing to see information about the request and response.
 
 ## Responses
@@ -219,7 +219,7 @@ The server's **response headers** look something like this:
 headers](https://curriculum-content.s3.amazonaws.com/phase-1/how-the-web-works-readme/response-headers.png)
 
 The headers contain all of the metadata about the response. This includes things
-like `content-length` (how big is my response) and what the `content-type` of
+like `content-length` (how big is my response) and what the `content-type` of the content is
 content it is (is it HTML? JSON? an image?). The headers also include the
 **status code** of the response.
 
@@ -240,11 +240,11 @@ the website, or parse the JSON response into another format.
 
 When human users interact with a website, they generally only pay attention to
 whether or not the website loads successfully. If it does, then their web
-request was a success - if it doesn't, then something went wrong.
+request was a success. If it doesn't, then something went wrong.
 
-However, you can also tell a request was successful if the response header's
-status code is `200`. You've probably seen another common status code, `404`.
-This means "resource not found."
+However, the HTTP response header also contains a _status code_ that indicates whether the request was successful. If the request wasn't successful, the specific code returned may provide a clue about what went wrong. A
+status code of `200` indicates a successful request. Another common status code, `404`,
+means "resource not found."
 
 Status codes are separated into categories based on their first digit. Here are
 the different categories:
@@ -255,15 +255,15 @@ the different categories:
 - 400's - error
 - 500's - server error
 
-There are a number of other status codes - it's a good idea to familiarize
+There are a number of other status codes. It's a good idea to familiarize
 yourself with them as you continue on your web development journey. You can see
 a full [list of status codes on Wikipedia][codes].
 
 ## Conclusion
 
 At this point, we're only writing client-side code, but it's still important to
-understand the following key concepts: the request-response cycle; URLs; HTTP
-verbs; and status codes. These are the rules of the internet.
+understand the following key concepts: the request-response cycle, URLs, HTTP
+verbs and status codes. These are the rules of the internet.
 
 When building web applications — whether they're client-side applications in
 JavaScript, or server-side applications in Python — it's essential for us to
