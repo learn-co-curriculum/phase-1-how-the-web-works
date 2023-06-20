@@ -12,7 +12,7 @@ How many times a day do you use the internet? How many times do you load a
 different web page? Think about how many times you do this in a year!
 
 As a user, all you really need to know is the URL of the website you want to
-visit - [www.google.com](www.google.com), for example. You don't need to concern
+visit — [www.google.com](www.google.com), for example. You don't need to concern
 yourself with what's going on behind the scenes.
 
 Web developers, on the other hand, need to know the fundamentals of how the web
