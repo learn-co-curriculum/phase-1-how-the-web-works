@@ -38,8 +38,8 @@ As we discussed in the previous lesson, clients and servers work together. By
 typing a URL into your browser, you (the client) are _requesting_ a web page.
 The server then receives the request, processes it, and sends a _response_
 containing the client-side code for that webpage — HTML, JavaScript, and CSS
-files. Your browser receives that response and uses the client-side code it contains to
-display the website.
+files. Your browser receives that response and uses the client-side code it
+contains to display the website.
 
 These are the fundamentals of the web. Browsers send requests and servers send
 responses.
@@ -51,7 +51,9 @@ known as _front end_ development, while writing server-side code is known as
 _back end_ development.
 
 We can write server-side code in a wide variety of programming languages.
-Python, JavaScript, Ruby, Java, PHP, C#, Go — the list goes on! Your browser doesn't know, nor does it care, what kind of server it talks to. It can communicate with servers written in any language!
+Python, JavaScript, Ruby, Java, PHP, C#, Go — the list goes on! Your browser
+doesn't know, nor does it care, what kind of server it talks to. It can
+communicate with servers written in any language!
 
 But, your browser doesn't know, nor does it care, what kind of server it talks
 to. It can communicate with servers written in any language! How does that work?
@@ -62,42 +64,41 @@ On top of that, you can use multiple clients! You can use Chrome, Safari,
 Firefox, Edge, and many others. All of those browsers are able to talk to the
 same servers.
 
-How does all this work? How can all the different browsers and all the different servers communicate with each other? And how is a server that was written 15 years ago still compatible with a browser written
-2 years ago? The answer is HTTP.
+How does all this work? How can all the different browsers and all the different
+servers communicate with each other? And how is a server that was written 15
+years ago still compatible with a browser written 2 years ago? The answer is
+HTTP.
 
 ## HTTP Overview
 
 Communication between different clients and different servers is only possible
-because communication between browsers and servers is controlled by a _protocol_.
+because communication between browsers and servers is controlled by a
+_protocol_.
 
 In computer science, a _protocol_ is simply a set of rules and procedures that
-dictates how information is transmitted between different computers.
+dictates how information is transmitted between different computers. The web
+uses a specific type of protocol, originally created by [Tim Berners-Lee][sir
+tim]: **Hyper Text Transfer Protocol**, or **HTTP**.
 
-The web uses a specific type of protocol, originally created by [Tim
-Berners-Lee][sir tim]: **Hyper Text Transfer
-Protocol**, or **HTTP**.
-
-All browsers and all servers are set up to use HTTP - it's what
-allows clients and servers of all types to communicate
-with each other.
+All browsers and all servers are set up to use HTTP - it's what allows clients
+and servers of all types to communicate with each other.
 
 Every time you load a web page, you are making an HTTP **request** to the site's
-server. The server then sends back an HTTP **response**.
-
-Once you start using `fetch` in JavaScript, you will be writing your own HTTP
-requests!
+server. The server then sends back an HTTP **response**. Once you start using
+`fetch` in JavaScript, you will be writing your own HTTP requests!
 
 In the GitHub example above, the client is making an **HTTP GET request** to
 GitHub's server. GitHub's server then sends back a response and the client
 renders the page in the browser.
 
-The diagram below shows how clients and servers communicate with each other to
-complete an HTTP request.
+## HTTP Requests
+
+Let's take a look at each of the components that make up a request. The diagram
+below shows how clients and servers communicate with each other to complete an
+HTTP request.
 
 ![computer
 server](https://curriculum-content.s3.amazonaws.com/how-the-web-works/Image_17_ComputerServer.png)
-
-## HTTP Requests
 
 ### URL
 
@@ -149,15 +150,12 @@ You can learn more about the [anatomy of a URL from MDN][url anatomy].
 ### HTTP Verbs
 
 When making a web request, in addition to the path, you also need to specify the
-action you would like the server to perform.
+action you would like the server to perform. We do this using [**HTTP
+Verbs**][verbs], which are also known as **request methods**.
 
-We do this using [**HTTP Verbs**][verbs], which are also known as **request
-methods**.
-
-We can use the same path for multiple actions by using different HTTP verbs to make different types
-of requests to that same path. It is the
-**combination** of the path and the HTTP verb (method) that _fully_ describes
-the request.
+We can use the same path for multiple actions by using different HTTP verbs to
+make different types of requests to that same path. It is the **combination** of
+the path and the HTTP verb (method) that _fully_ describes the request.
 
 For example, making a **POST** request to
 `/learn-co-curriculum/phase-1-how-the-web-works` tells the server something
@@ -165,12 +163,12 @@ different than making a **GET** request to
 `/learn-co-curriculum/phase-1-how-the-web-works`.
 
 **GET** requests are the most common browser requests. This just means "hey
-server, please _GET_ me this resource", i.e., load this web page.
+server, please _GET_ me this resource", i.e., load this web page. Other verbs
+are used if we want to send some data from the user to the server, or modify or
+delete existing data.
 
-Other verbs are used if we want to send some data from the user to the server,
-or modify or delete existing data. Below is a list of the available HTTP verbs
-and what each is conventionally used for. We will learn more about them a bit
-later.
+Below is a list of the available HTTP verbs and what each is conventionally used
+for. We will learn more about them a bit later.
 
 | Verb    | Description                                                               |
 | ------- | ------------------------------------------------------------------------- |
@@ -204,8 +202,8 @@ like this:
 headers](https://curriculum-content.s3.amazonaws.com/phase-1/how-the-web-works-readme/request-headers.png)
 
 You can check out the request/response data for any website in the Network tab
-in the browser dev tools: open the Network tab, refresh the page, then click
-the top listing to see information about the request and response.
+in the browser dev tools: open the Network tab, refresh the page, then click the
+top listing to see information about the request and response.
 
 ## Responses
 
@@ -219,9 +217,9 @@ The server's **response headers** look something like this:
 headers](https://curriculum-content.s3.amazonaws.com/phase-1/how-the-web-works-readme/response-headers.png)
 
 The headers contain all of the metadata about the response. This includes things
-like `content-length` (how big is my response) and what the `content-type` of the content is
-content it is (is it HTML? JSON? an image?). The headers also include the
-**status code** of the response.
+like `content-length` (how big is my response) and what the `content-type` of
+the content is content it is (is it HTML? JSON? an image?). The headers also
+include the **status code** of the response.
 
 The **body** of the response is what you see rendered on the page. It is all of
 that HTML/CSS that you see! Most of the data of a response is in the body, not
@@ -242,18 +240,20 @@ When human users interact with a website, they generally only pay attention to
 whether or not the website loads successfully. If it does, then their web
 request was a success. If it doesn't, then something went wrong.
 
-However, the HTTP response header also contains a _status code_ that indicates whether the request was successful. If the request wasn't successful, the specific code returned may provide a clue about what went wrong. A
-status code of `200` indicates a successful request. Another common status code, `404`,
+However, the HTTP response header also contains a _status code_ that indicates
+whether the request was successful. If the request wasn't successful, the
+specific code returned may provide a clue about what went wrong. A status code
+of `200` indicates a successful request. Another common status code, `404`,
 means "resource not found."
 
 Status codes are separated into categories based on their first digit. Here are
 the different categories:
 
-- 100's - informational
-- 200's - success
-- 300's - redirect
-- 400's - error
-- 500's - server error
+- 100's: informational
+- 200's: success
+- 300's: redirect
+- 400's: error
+- 500's: server error
 
 There are a number of other status codes. It's a good idea to familiarize
 yourself with them as you continue on your web development journey. You can see
@@ -263,11 +263,12 @@ a full [list of status codes on Wikipedia][codes].
 
 At this point, we're only writing client-side code, but it's still important to
 understand the following key concepts: the request-response cycle, URLs, HTTP
-verbs and status codes. These are the rules of the internet.
+verbs and status codes. Together, these components form the foundation of the
+internet itself!
 
 When building web applications — whether they're client-side applications in
 JavaScript, or server-side applications in Python — it's essential for us to
-know and follow these rules!
+know and understand these components!
 
 ## Resources
 
