@@ -77,7 +77,7 @@ The web uses a specific type of protocol, originally created by [Tim
 Berners-Lee][sir tim]: **Hyper Text Transfer
 Protocol**, or **HTTP**.
 
-All browsers and all servers are set up to use HTTP - it's one of the common
+All browsers and all servers are set up to use HTTP - it's what
 protocols of the web that allows clients and servers of all types to communicate
 with each other.
 
