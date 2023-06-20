@@ -51,7 +51,7 @@ known as _front end_ development, while writing server-side code is known as
 _back end_ development.
 
 We can write server-side code in a wide variety of programming languages.
-Python, JavaScript, Ruby, Java, PHP, C#, Go - the list goes on!
+Python, JavaScript, Ruby, Java, PHP, C#, Go — the list goes on! Your browser doesn't know, nor does it care, what kind of server it talks to. It can communicate with servers written in any language!
 
 But, your browser doesn't know, nor does it care, what kind of server it talks
 to. It can communicate with servers written in any language! How does that work?
