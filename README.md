@@ -62,6 +62,9 @@ On top of that, you can use multiple clients! You can use Chrome, Safari,
 Firefox, Edge, and many others. All of those browsers are able to talk to the
 same servers.
 
+How does all this work? How can all the different browsers and all the different servers communicate with each other? And how is a server that was written 15 years ago still compatible with a browser written
+2 years ago? The answer is HTTP.
+
 ## HTTP Overview
 
 Communication between different clients and different servers is only possible
