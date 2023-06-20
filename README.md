@@ -16,7 +16,7 @@ visit — [www.google.com](www.google.com), for example. You don't need to conce
 yourself with what's going on behind the scenes.
 
 Web developers, on the other hand, need to know the fundamentals of how the web
-works. From here on out, you are no longer just a user of the internet - you are
+works. From here on out, you are no longer just a user of the internet — you are
 a creator of the web!
 
 ## Client and Server
