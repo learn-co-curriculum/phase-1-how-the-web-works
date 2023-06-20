@@ -38,7 +38,7 @@ As we discussed in the previous lesson, clients and servers work together. By
 typing a URL into your browser, you (the client) are _requesting_ a web page.
 The server then receives the request, processes it, and sends a _response_
 containing the client-side code for that webpage — HTML, JavaScript, and CSS
-files. Your browser receives that response and uses the client-side code to
+files. Your browser receives that response and uses the client-side code it contains to
 display the website.
 
 These are the fundamentals of the web. Browsers send requests and servers send
