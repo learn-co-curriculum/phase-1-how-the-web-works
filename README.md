@@ -68,7 +68,7 @@ How does all this work? How can all the different browsers and all the different
 ## HTTP Overview
 
 Communication between different clients and different servers is only possible
-because communcation between browsers and servers is controlled by a _protocol_.
+because communication between browsers and servers is controlled by a _protocol_.
 
 In computer science, a _protocol_ is simply a set of rules and procedures that
 dictates how information is transmitted between different computers.
