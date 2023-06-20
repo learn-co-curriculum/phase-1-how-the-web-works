@@ -45,7 +45,7 @@ These are the fundamentals of the web. Browsers send requests and servers send
 responses.
 
 Just as we're currently writing _client-side_ code, we can also write
-_server-side_ code that tells our server what it's supposed to do - how to
+_server-side_ code that tells our server what it's supposed to do — how to
 handle specific requests from a client, for example. Writing client-side code is
 known as _Frontend_ development, while writing server-side code is known as
 _Backend_ development.
