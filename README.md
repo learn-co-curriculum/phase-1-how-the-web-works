@@ -4,7 +4,7 @@
 
 - Explain what an HTTP request is
 - Explain the nature of request and response
-- Define a static site vs. a dynamic site
+- Identify HTTP verbs
 
 ## Introduction
 
