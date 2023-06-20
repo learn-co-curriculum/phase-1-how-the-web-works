@@ -74,7 +74,7 @@ In computer science, a _protocol_ is simply a set of rules and procedures that
 dictates how information is transmitted between different computers.
 
 The web uses a specific type of protocol, originally created by [Tim
-Berners-Lee][sir tim]. This protocol is call the **Hyper Text Transfer
+Berners-Lee][sir tim]: **Hyper Text Transfer
 Protocol**, or **HTTP**.
 
 All browsers and all servers are set up to use HTTP - it's one of the common
