@@ -60,7 +60,7 @@ How can a server that was written 15 years ago still work with a browser written
 
 On top of that, you can use multiple clients! You can use Chrome, Safari,
 Firefox, Edge, and many others. All of those browsers are able to talk to the
-same servers. Let's take a closer look at how this works.
+same servers.
 
 ## HTTP Overview
 
