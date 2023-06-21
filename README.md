@@ -133,7 +133,7 @@ millions and millions of users and repositories, so we need to identify the
 specific resource we want using the path:
 `/learn-co-curriculum/phase-1-how-the-web-works`.
 
-Let's think about this using a real world example - an apartment building!
+Let's think about this using a real world example — an apartment building!
 
 The **domain** is the entire building. Within that building, though, there are
 hundreds of apartments. We use the specific **path** (also called a resource) to
